@@ -1,0 +1,42 @@
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll.config
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.pdb
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.csprojResolveAssemblyReference.cache
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.dll
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.pdb
+C:\Rahul\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll.config
+C:\Rahul\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll
+C:\Rahul\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.pdb
+C:\Rahul\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.dll
+C:\Rahul\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.pdb
+C:\Rahul\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll.config
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.pdb
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.dll
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.pdb
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll.config
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.pdb
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.csprojResolveAssemblyReference.cache
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.dll
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.pdb
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll.config
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.pdb
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.csprojResolveAssemblyReference.cache
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.dll
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.pdb
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll.config
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.pdb
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.dll
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.pdb
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll.config
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.pdb
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.csprojResolveAssemblyReference.cache
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.dll
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.pdb

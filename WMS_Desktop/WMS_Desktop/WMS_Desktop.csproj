@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A4F7F4D-21C1-49F1-9193-C7F47EB1713E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WMS_Desktop</RootNamespace>
+    <AssemblyName>WMS_Desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.15.0.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Ranjit\Running Projects\TTPL_BarcodeGeneration\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MRP_Label.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MRP_Label.Designer.cs">
+      <DependentUpon>MRP_Label.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WhsData.cs">
+      <DependentUpon>WhsData.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WhsData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WhsData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WMSData.cs">
+      <DependentUpon>WMSData.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WMSData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WMSData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WMS_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WMS_Home.Designer.cs">
+      <DependentUpon>WMS_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WMS_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WMS_Login.Designer.cs">
+      <DependentUpon>WMS_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WMS_Master.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WMS_Master.Designer.cs">
+      <DependentUpon>WMS_Master.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MRP_Label.resx">
+      <DependentUpon>MRP_Label.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\rptAtlasCopcoItems.rdlc" />
+    <EmbeddedResource Include="Report\rptAtlasCopcoItemsBarcode.rdlc" />
+    <EmbeddedResource Include="Report\rptAtlasCopco_Barcode.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptMRNLabelItemsScanner.rdlc" />
+    <EmbeddedResource Include="Report\rptMRNLabelItemsScanner1.rdlc" />
+    <EmbeddedResource Include="WMS_Home.resx">
+      <DependentUpon>WMS_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WMS_Login.resx">
+      <DependentUpon>WMS_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WMS_Master.resx">
+      <DependentUpon>WMS_Master.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WhsData.xsc">
+      <DependentUpon>WhsData.xsd</DependentUpon>
+    </None>
+    <None Include="WhsData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WhsData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="WhsData.xss">
+      <DependentUpon>WhsData.xsd</DependentUpon>
+    </None>
+    <None Include="WMSData.xsc">
+      <DependentUpon>WMSData.xsd</DependentUpon>
+    </None>
+    <None Include="WMSData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WMSData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="WMSData.xss">
+      <DependentUpon>WMSData.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WMS_DAL\WMS_DAL.csproj">
+      <Project>{00ec1c88-b342-4534-9148-054fb0f64589}</Project>
+      <Name>WMS_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WMS_Models\WMS_Models.csproj">
+      <Project>{6ba6097d-6071-42b9-87f5-1466b8d2e8e1}</Project>
+      <Name>WMS_Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\SpearLogo.jpg" />
+    <None Include="Images\BG-Warehouse.jpg" />
+    <Content Include="Images\bg_login.jpg" />
+    <Content Include="Images\LabelPrint-Barcode.png" />
+    <Content Include="Images\LabelPrint-QR.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\SignIn.jpg" />
+    <Content Include="Images\SpearLogo-TM2.jpg" />
+    <Content Include="Images\SpearLogoReport.jpg" />
+    <Content Include="Images\Warehouse1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Descripancy_Barcode1\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

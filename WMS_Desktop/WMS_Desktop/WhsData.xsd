@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WhsData" targetNamespace="http://tempuri.org/WhsData.xsd" xmlns:mstns="http://tempuri.org/WhsData.xsd" xmlns="http://tempuri.org/WhsData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="WhsData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="WhsData" msprop:Generator_UserDSName="WhsData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblLabelPrinting1" msprop:Generator_TableClassName="tblLabelPrinting1DataTable" msprop:Generator_TableVarName="tabletblLabelPrinting1" msprop:Generator_TablePropName="tblLabelPrinting1" msprop:Generator_RowDeletingName="tblLabelPrinting1RowDeleting" msprop:Generator_RowChangingName="tblLabelPrinting1RowChanging" msprop:Generator_RowEvHandlerName="tblLabelPrinting1RowChangeEventHandler" msprop:Generator_RowDeletedName="tblLabelPrinting1RowDeleted" msprop:Generator_UserTableName="tblLabelPrinting1" msprop:Generator_RowChangedName="tblLabelPrinting1RowChanged" msprop:Generator_RowEvArgName="tblLabelPrinting1RowChangeEvent" msprop:Generator_RowClassName="tblLabelPrinting1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ColoumnName" msprop:Generator_ColumnVarNameInTable="columnColoumnName" msprop:Generator_ColumnPropNameInRow="ColoumnName" msprop:Generator_ColumnPropNameInTable="ColoumnNameColumn" msprop:Generator_UserColumnName="ColoumnName" type="xs:string" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
+              <xs:element name="FID" msprop:Generator_ColumnVarNameInTable="columnFID" msprop:Generator_ColumnPropNameInRow="FID" msprop:Generator_ColumnPropNameInTable="FIDColumn" msprop:Generator_UserColumnName="FID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

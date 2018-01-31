@@ -1,0 +1,213 @@
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe.config
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.dll
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.dll
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.dll
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.pdb
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.pdb
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.pdb
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csprojResolveAssemblyReference.cache
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.MRP_Label.resources
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.Properties.Resources.resources
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Home.resources
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Login.resources
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Master.resources
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csproj.GenerateResource.Cache
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.exe
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.pdb
+C:\Ranjit\Running Projects\Spears\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.pdb
+C:\Rahul\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe
+C:\Rahul\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe.config
+C:\Rahul\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.dll
+C:\Rahul\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.dll
+C:\Rahul\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.dll
+C:\Rahul\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.pdb
+C:\Rahul\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.pdb
+C:\Rahul\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.pdb
+C:\Rahul\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csprojResolveAssemblyReference.cache
+C:\Rahul\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.MRP_Label.resources
+C:\Rahul\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.Properties.Resources.resources
+C:\Rahul\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Home.resources
+C:\Rahul\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Login.resources
+C:\Rahul\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Master.resources
+C:\Rahul\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csproj.GenerateResource.Cache
+C:\Rahul\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.exe
+C:\Rahul\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.pdb
+C:\Rahul\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.pdb
+C:\Rahul\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Rahul\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Rahul\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+C:\Rahul\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Rahul\WMS_Desktop\WMS_Desktop\bin\Debug\zxing.dll
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe.config
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.exe
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.pdb
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.MRP_Label.resources
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.Properties.Resources.resources
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Home.resources
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Login.resources
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Master.resources
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.pdb
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.dll
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.dll
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.dll
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.pdb
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.pdb
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\zxing.pdb
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\zxing.xml
+C:\Users\Administrator\Desktop\New folder\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.pdb
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe.config
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.pdb
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.dll
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.dll
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.dll
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.pdb
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.pdb
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\zxing.pdb
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\zxing.xml
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.pdb
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csprojResolveAssemblyReference.cache
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.MRP_Label.resources
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.Properties.Resources.resources
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Home.resources
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Login.resources
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Master.resources
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csproj.GenerateResource.Cache
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.exe
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.pdb
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.cache
+C:\Rahul\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.compiled
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe.config
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.exe
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.pdb
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.pdb
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.dll
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.dll
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.dll
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.pdb
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.pdb
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\zxing.pdb
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\zxing.xml
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.pdb
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.MRP_Label.resources
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.Properties.Resources.resources
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Home.resources
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Login.resources
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Master.resources
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.cache
+C:\Users\Administrator\Desktop\New folder\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.compiled
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe.config
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.Common.dll
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.SqlServer.Types.dll
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.dll
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.dll
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.dll
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.pdb
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.pdb
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.pdb
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csprojResolveAssemblyReference.cache
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.MRP_Label.resources
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.Properties.Resources.resources
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Home.resources
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Login.resources
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Master.resources
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csproj.GenerateResource.Cache
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.cache
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.compiled
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.exe
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.pdb
+F:\rahul\30-1-18\30-1-18\WinDesktop-Rahul-Backup\WinDesktop-Rahul-Backup\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.pdb
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe.config
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.pdb
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.dll
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.dll
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.dll
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.pdb
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.pdb
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.pdb
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.MRP_Label.resources
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.Properties.Resources.resources
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Home.resources
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Login.resources
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Master.resources
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.cache
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.compiled
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.exe
+C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.pdb
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe.config
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.Common.dll
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.SqlServer.Types.dll
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.dll
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.dll
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.dll
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.pdb
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.pdb
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.pdb
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csprojResolveAssemblyReference.cache
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.MRP_Label.resources
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.Properties.Resources.resources
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Home.resources
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Login.resources
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Master.resources
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csproj.GenerateResource.Cache
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.cache
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.compiled
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.exe
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.pdb
+F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.pdb
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe.config
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.exe
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.pdb
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.pdb
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.Common.dll
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.SqlServer.Types.dll
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.dll
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.dll
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.dll
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_DAL.pdb
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Models.pdb
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Core.pdb
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csprojResolveAssemblyReference.cache
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.MRP_Label.resources
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.Properties.Resources.resources
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Home.resources
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Login.resources
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Master.resources
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csproj.GenerateResource.Cache
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.cache
+F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.compiled
