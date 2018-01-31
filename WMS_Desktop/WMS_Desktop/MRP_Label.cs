@@ -91,7 +91,7 @@ namespace WMS_Desktop
 
         private void cmbItem_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            // MRp Changes
         }
 
         private void cmbPONO_SelectedIndexChanged(object sender, EventArgs e)
@@ -150,7 +150,7 @@ namespace WMS_Desktop
             }
             else
             {
-
+                // no match scanner code
             }
 
         }
@@ -177,10 +177,8 @@ namespace WMS_Desktop
 
         public void PrintBarcode()
         {
-            
             int clientid = Convert.ToInt32(cmbBoxClient.SelectedValue);
             string MRNNo = cmbBoxMRNNO.SelectedValue.ToString();
-
             int OrderId = Convert.ToInt32(cmbPONO.SelectedValue);
             int Itemid = Convert.ToInt32(cmbItem.SelectedValue);
             string Itemdesc = txtDescription.Text;
@@ -194,10 +192,6 @@ namespace WMS_Desktop
           
             try
             {
-
-                // _dal_MrpPrint;
-
-                
                 // var user = WMSWebSession.GetInstance().User;
                 dt = _dal_MrpPrint.GetPreferenceById(clientid);
                 string labelColumnId = dt.Rows[0][0].ToString();
@@ -241,8 +235,6 @@ namespace WMS_Desktop
                     int fid = 1;
                     for (int i = 0; i < dtmrnItems.Rows.Count;i++)
                     {
-                        //for (int qty = 0; qty < mrnItem.Quantity; qty++)
-                        //{
                         for (int Noofst = 0; Noofst < noOfStickers; Noofst++)
                         {
                             string directoryPath = string.Format("{0}\\{1}", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "Descripancy_Barcode");
@@ -283,15 +275,10 @@ namespace WMS_Desktop
                             }
                             //string path = AppDomain.CurrentDomain.BaseDirectory + imgPath;
                             string path = string.Format("{0}\\{1}", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), imgPath);
-                             //string path = @"C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\" + imgPath;
-                            //C:\Users\Administrator\Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\~\Descripancy_Barcode
-                           //string path =  "C:\\Users\\Administrator\\Desktop\\WMS_Desktop\\WMS_Desktop\\bin\\Debug\\Descripancy_Barcode"+ imgPath;
-                           //string Path = "C://Users//Administrator//Desktop//WMS_Desktop//WMS_Desktop//bin//Debug//~//Reports_PDF//" + imgPath;
+                            path = "File:///" + path;
     
                             ws.tblLabelBarcode.Rows.Add(path, fid);
-
-                          
-                            //MRN Number, PO Number, SO Number, Item Code, Description, Batch Number, Exp. Date, Mfg. Date, MRP, Quantity
+                           
                             //if (labelColumnIds.Contains(1))
                             ws.tblLabelPrinting.Rows.Add("Description", dtmrnItems.Rows[i]["ItemDescription"], fid);
                             //if (labelColumnIds.Contains(2))
@@ -360,7 +347,6 @@ namespace WMS_Desktop
                 string mimeType = string.Empty;
                 string encoding = string.Empty;
                 string extension = string.Empty;
-
                 // Setup the report viewer object and get the array of bytes
                 ReportViewer viewer = new ReportViewer();
                 viewer.ProcessingMode = ProcessingMode.Local;
@@ -389,8 +375,6 @@ namespace WMS_Desktop
                 //viewer.LocalReport.SetParameters(param);
                // viewer.LocalReport.Refresh();
 
-
-                //using (System.IO.Stream report = System.IO.File.OpenRead(Server.MapPath(@"~\Reports\rptMRNLabelItems.rdlc")))
                 string subreportPath = "~/Report/rptAtlasCopcoItemsBarcode.rdlc";
                 using (System.IO.Stream report = System.IO.File.OpenRead(subreportPath))
                 {
@@ -410,8 +394,6 @@ namespace WMS_Desktop
 
                 byte[]  bytes = viewer.LocalReport.Render("PDF", null, out mimeType, out encoding, out extension, out streamIds, out warnings);
 
-
-
                 //Server.MapPath("~/App_Data/
                 string path1 = "~/Reports_PDF";
                 string file_name = MRNNo + "_LabelPrint.pdf"; //save the file in unique name 
@@ -424,7 +406,7 @@ namespace WMS_Desktop
                 file.Dispose();
 
                 string filePath = path1 + "/" + file_name;
-
+                
                 // Create Copy of SAME pdf ON Local Machine 
 
                 string sourcePath = path1;
@@ -476,37 +458,11 @@ namespace WMS_Desktop
                         KillAdobe("AcroRd32");
                         File.Delete(dir);
                     }
+
+
+
                 }
-
-                // this.LogInfo("One");
-
-                // SendToPrinter(filePath);
-                //this.LogInfo("Two");
-                //save print log
-              //  _labelprintingService.SaveLabelPrintingLog(clientid, MRNNo, Itemid, OrderId, 0, Itemdesc, noOfStickers, user.Id, barcodeCombinationid, SelectMRPOrIndustrailuseValue, 1);
-                // _mrnInwardService.SaveLablePrintingLog(clientid, MRNNo, selectedItems, selectedPOs, printAllItems, barcodeType, user.Id, Convert.ToString(noOfStickers));
-
-                //Response.AddHeader("Content-Type", "application/pdf");
-                //bool openInlineCheckBox = false;
-                //byte[] pdfByte = GetBytesFromFile(filePath);
-                //// Instruct the browser to open the PDF file as an attachment or inline
-                ////file_name = "Spear_print_file.pdf";
-                //file_name = "SpearLabel" + "_" + DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss") + ".pdf";
-               // Response.AddHeader("Content-Disposition", String.Format("{0}; filename=" + file_name + "; size={1}", openInlineCheckBox ? "inline" : "attachment", pdfByte.Length.ToString()));
-               // // Write the PDF document buffer to HTTP response
-
-               // Response.BinaryWrite(pdfByte);
-
-
-
-               // // End the HTTP response and stop the current page processing
-               //Response.End();
-
-
-               // Response.AppendHeader("Content-Disposition", "inline; filename=" + file_name + ";");
-               // byte[] pdfByte = GetBytesFromFile(filePath);
-               // return File(pdfByte, "application/pdf");
-
+                clear();
                 viewer.LocalReport.Refresh();
 
             }
@@ -516,6 +472,15 @@ namespace WMS_Desktop
                // this.LogInfo(ex.Message);
                 
             }
+        }
+
+
+        public void clear()
+        {
+            txtCharLeftShift.Text = string.Empty;
+            txtCharRightShift.Text = string.Empty;
+            txtDescription.Text = string.Empty;
+            txtNoOfStricker.Text = string.Empty;
         }
 
         public void PrintLabelForQRCode()
@@ -647,7 +612,7 @@ namespace WMS_Desktop
 
 
                             string path = string.Format("{0}\\{1}", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), imgPath1);
-                          //  string path = "File:///" + imgPath1;
+                            path = "File:///" + path;
 
 
                             ws.tblLabelBarcode.Rows.Add(path, fid);
