@@ -41,41 +41,41 @@ namespace WMS_Desktop
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            WMS_Master obj = new WMS_Master();
-            obj.Show();
-             
+            //WMS_Master obj = new WMS_Master();
+            //obj.Show();
 
-            //if (Convert.ToInt32(cmbWarehouse.SelectedValue) <= 0)
-            //{
-            //    MessageBox.Show("Please select warehouse.", "Warning");
-            //}
-            //else if (string.IsNullOrEmpty(txtPassword.Text.Trim()) || string.IsNullOrEmpty(txtUsername.Text.Trim()))
-            //{
-            //    MessageBox.Show("Please enter username and password.", "Warning");
-            //}
-            //else
-            //{
-            //    LoginVO loginVO = new LoginVO();
-            //    loginVO.WarehouseId = Convert.ToInt32(cmbWarehouse.SelectedValue);
-            //    loginVO.UserId = txtUsername.Text.Trim();
-            //    loginVO.Password = txtPassword.Text.Trim();
 
-            //    DataTable dt = _dal_Login.GetLoginDetails(loginVO);
-            //    if (dt != null && dt.Rows.Count > 0)
-            //    {
+            if (Convert.ToInt32(cmbWarehouse.SelectedValue) <= 0)
+            {
+                MessageBox.Show("Please select warehouse.", "Warning");
+            }
+            else if (string.IsNullOrEmpty(txtPassword.Text.Trim()) || string.IsNullOrEmpty(txtUsername.Text.Trim()))
+            {
+                MessageBox.Show("Please enter username and password.", "Warning");
+            }
+            else
+            {
+                LoginVO loginVO = new LoginVO();
+                loginVO.WarehouseId = Convert.ToInt32(cmbWarehouse.SelectedValue);
+                loginVO.UserId = txtUsername.Text.Trim();
+                loginVO.Password = txtPassword.Text.Trim();
 
-            //        this.Hide();
-            //        WMS_Master master = new WMS_Master();
-            //        master.Show();
-            //    }
-            //    else
-            //    {
-            //        txtUsername.Text = string.Empty;
-            //        txtPassword.Text = string.Empty;
-            //        MessageBox.Show("Invalid username and password.", "Warning");
-            //    }
+                DataTable dt = _dal_Login.GetLoginDetails(loginVO);
+                if (dt != null && dt.Rows.Count > 0)
+                {
 
-            //}
+                    this.Hide();
+                    WMS_Master master = new WMS_Master();
+                    master.Show();
+                }
+                else
+                {
+                    txtUsername.Text = string.Empty;
+                    txtPassword.Text = string.Empty;
+                    MessageBox.Show("Invalid username and password.", "Warning");
+                }
+
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
