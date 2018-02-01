@@ -43,6 +43,7 @@
     <Compile Include="DAL_Login.cs" />
     <Compile Include="DAL_Warehouse.cs" />
     <Compile Include="DAL_MRPLabelPrint.cs" />
+    <Compile Include="MRP_LabelPrint_Dal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

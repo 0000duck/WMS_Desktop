@@ -97,14 +97,20 @@ namespace WMS_Desktop
 
         private void mRPLabelPrintingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MRP_Label mrplabel = new MRP_Label();
-            mrplabel.MdiParent = this.MdiParent;
-            mrplabel.Show();
+            MRPLabelPrint mrp = new MRPLabelPrint();
+            mrp.Show();
         }
 
         private void WMS_Master_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void labelPrintingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MRP_Label mrplabel = new MRP_Label();
+            mrplabel.MdiParent = this.MdiParent;
+            mrplabel.Show();
         }
     }
 }

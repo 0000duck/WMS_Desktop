@@ -235,3 +235,4 @@ F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.compiled
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.exe
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.pdb
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.pdb
+F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.MRPLabelPrint.resources

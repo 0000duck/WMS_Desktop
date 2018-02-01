@@ -42,6 +42,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="LoginVO.cs" />
     <Compile Include="MRPPrintModel.cs" />
+    <Compile Include="PrintMRPLabelModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

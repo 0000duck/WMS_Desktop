@@ -66,6 +66,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MRPLabelPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MRPLabelPrint.Designer.cs">
+      <DependentUpon>MRPLabelPrint.cs</DependentUpon>
+    </Compile>
     <Compile Include="MRP_Label.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     <Compile Include="WMS_Master.Designer.cs">
       <DependentUpon>WMS_Master.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MRPLabelPrint.resx">
+      <DependentUpon>MRPLabelPrint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MRP_Label.resx">
       <DependentUpon>MRP_Label.cs</DependentUpon>
     </EmbeddedResource>
