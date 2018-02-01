@@ -32,7 +32,6 @@ F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Models\obj\Debug\WMS_Models.dll
 F:\rahul\30-1-18\30-1-18 Evening\WMS_Desktop\WMS_Models\obj\Debug\WMS_Models.pdb
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Models\bin\Debug\WMS_Models.dll
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Models\bin\Debug\WMS_Models.pdb
-F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Models\obj\Debug\WMS_Models.csprojResolveAssemblyReference.cache
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Models\obj\Debug\WMS_Models.dll
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Models\obj\Debug\WMS_Models.pdb
 D:\SpearCommunity\Spear\WMS_Desktop\WMS_Models\bin\Debug\WMS_Models.dll

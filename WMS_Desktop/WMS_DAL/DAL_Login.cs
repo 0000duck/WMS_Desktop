@@ -30,13 +30,13 @@ namespace WMS_DAL
         public DataTable GetLoginDetails(LoginVO loginVO)
         {
             string query = string.Format("spGetUserDetailsForLogin");
-            SqlParameter[] sqlParameters = new SqlParameter[2];
+            SqlParameter[] sqlParameters = new SqlParameter[3];
             sqlParameters[0] = new SqlParameter("@WarehouseId", SqlDbType.Int);
             sqlParameters[0].Value = Convert.ToString(loginVO.WarehouseId);
             sqlParameters[1] = new SqlParameter("@Username", SqlDbType.NVarChar);
             sqlParameters[1].Value = Convert.ToString(loginVO.Username);
-            sqlParameters[1] = new SqlParameter("@Password", SqlDbType.NVarChar);
-            sqlParameters[1].Value = Convert.ToString(commonFunctions.EncryptPassword(loginVO.Password));
+            sqlParameters[2] = new SqlParameter("@Password", SqlDbType.NVarChar);
+            sqlParameters[2].Value = Convert.ToString(commonFunctions.EncryptPassword(loginVO.Password));
             return conn.executeSelectQuery(query, sqlParameters);
         }
 

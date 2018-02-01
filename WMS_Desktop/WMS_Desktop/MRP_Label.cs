@@ -17,8 +17,8 @@ using Microsoft.Reporting.WinForms;
 using System.Drawing.Imaging;
 using System.Web;
 using System.Diagnostics;
-
 using System.Configuration;
+
 
 namespace WMS_Desktop
 {
@@ -29,6 +29,7 @@ namespace WMS_Desktop
         private MRPPrintModel MrpModel;
         public DataTable MRNLabelItem = new DataTable();
         public DataTable MRNLabelItem1 = new DataTable();
+        public string MRPValueMRP=string.Empty;
 
         public MRP_Label()
         {
@@ -54,7 +55,6 @@ namespace WMS_Desktop
                 cmbBoxClient.DisplayMember = "Name";
                 cmbBoxClient.ValueMember = "Id";
                 cmbBoxClient.DataSource = dt;
-               
             }
         }
 
@@ -91,7 +91,7 @@ namespace WMS_Desktop
 
         private void cmbItem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // MRp Changes
+            //string MRPVALUE = _dal_MrpPrint.ItemMrpValue(Convert.ToInt32(cmbItem.SelectedValue));
         }
 
         private void cmbPONO_SelectedIndexChanged(object sender, EventArgs e)
@@ -150,6 +150,7 @@ namespace WMS_Desktop
             }
             else
             {
+                MessageBox.Show("Item Code are not match");
                 // no match scanner code
             }
 
@@ -164,16 +165,15 @@ namespace WMS_Desktop
              e.DataSources.Add(rds);
         }
 
+        //void LocalReportLabel_SubreportProcessing1(object sender, Microsoft.Reporting.WinForms.SubreportProcessingEventArgs e)
+        //{
+        //    string strParameter = e.Parameters["FID"].Values[0].ToString();
+        //    DataTable dt = MRNLabelItem1;
+        //    DataTable dts = dt.Select("FID = '" + strParameter + "'").CopyToDataTable();
+        //    ReportDataSource rds = new ReportDataSource("dsWMS1", dts);
+        //    e.DataSources.Add(rds);
 
-        void LocalReportLabel_SubreportProcessing1(object sender, Microsoft.Reporting.WinForms.SubreportProcessingEventArgs e)
-        {
-            string strParameter = e.Parameters["FID"].Values[0].ToString();
-            DataTable dt = MRNLabelItem1;
-            DataTable dts = dt.Select("FID = '" + strParameter + "'").CopyToDataTable();
-            ReportDataSource rds = new ReportDataSource("dsWMS1", dts);
-            e.DataSources.Add(rds);
-
-        }
+        //}
 
         public void PrintBarcode()
         {
@@ -323,23 +323,25 @@ namespace WMS_Desktop
                             //    }
 
                             if (labelColumnIds1.Contains(10))
-                                //ws.tblLabelPrinting.Rows.Add("Quantity", "Unit Qty.: " + dtmrnItems.Rows[i]["UnitQuantity"] + " " + dtmrnItems.Rows[i]["UOM"], fid);
-                            //if (mrnItem.MRP == 0)
-                            //{
-                            //    if (IFMRPIsZero == 1)
-                            //    {
-                            //        wmsDs.tblLabelPrinting.Rows.Add(@ReportRes.MRP, "", fid);
-                            //    }
-                            //}
-                                
-                           WMSDs1.tblLabelPrinting1.Rows.Add("ItemCode", "Item No.: " + dtmrnItems.Rows[i]["ItemCode1"], fid);
+                                ws.tblLabelPrinting.Rows.Add("Quantity", "Unit Qty.: " + dtmrnItems.Rows[i]["UnitQuantity"] + " " + dtmrnItems.Rows[i]["UOM_Name"], fid);
+                            if (dtmrnItems.Rows[i]["MRPValue"] != null)
+                            {
+                                if (dtmrnItems.Rows[i]["MRPValue"] == "I")
+                                {
+                                    ws.tblLabelPrinting.Rows.Add("MRP", "Industrial", fid);
+                                }
+                                else if (dtmrnItems.Rows[i]["MRPValue"] == "N")
+                                {
+                                    ws.tblLabelPrinting.Rows.Add("MRP", "Not For sale", fid);
+                                }
+                            }
                             fid = fid + 1;
                         }
                         //}
                     }
 
                     MRNLabelItem = ws.tblLabelPrinting;
-                    MRNLabelItem1 = WMSDs1.tblLabelPrinting1;
+                   // MRNLabelItem1 = WMSDs1.tblLabelPrinting1;
                 }
                 // Variables
                 Warning[] warnings;
@@ -362,8 +364,8 @@ namespace WMS_Desktop
                 ReportParameter[] param = new ReportParameter[3];
 
                 string strPrintString = "";
-                string CompanyName = "Imp/Pkd. By Atlas Copco (India) Ltd.";
-                string Address = "Atlas Copco (India) Ltd.\nCompressor Technique,Gat No. 397, Vitthalwadi,Lonikand,Pune-\n412216,Maharastra,India. Customer Care No. 020-39852521\nEmail: ctlogistics.helpdesk@in.atlascopco.com";
+                string CompanyName = ConfigurationManager.AppSettings["CompanyName"];
+                string Address = ConfigurationManager.AppSettings["Address"];
 
                 param[0] = new ReportParameter("CompanyName", CompanyName);
                 param[1] = new ReportParameter("Address", Address);
@@ -383,33 +385,29 @@ namespace WMS_Desktop
                 viewer.LocalReport.SubreportProcessing +=
                    new Microsoft.Reporting.WinForms.SubreportProcessingEventHandler(LocalReportLabel_SubreportProcessing);
 
-                //using (System.IO.Stream report = System.IO.File.OpenRead("~/Report/rptAtlasCopco_Barcode.rdlc"))
-                //{
-                //    viewer.LocalReport.LoadSubreportDefinition("rptAtlasCopco_Barcode", report);
-                //}
-                //viewer.LocalReport.SubreportProcessing += new Microsoft.Reporting.WinForms.SubreportProcessingEventHandler(LocalReportLabel_SubreportProcessing1);
-                //string deviceInfo = string.Format("<DeviceInfo><PageHeight>{0}</PageHeight><PageWidth>{1}</PageWidth></DeviceInfo>", "7.6cm", "9.0cm");
-                //viewer.RefreshReport();
-
-
                 byte[]  bytes = viewer.LocalReport.Render("PDF", null, out mimeType, out encoding, out extension, out streamIds, out warnings);
 
-                //Server.MapPath("~/App_Data/
-                string path1 = "~/Reports_PDF";
+                
+                string FilePath = string.Format("{0}\\{1}", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "Reports_PDF");
+                if (!Directory.Exists(FilePath))
+                {
+                    Directory.CreateDirectory(FilePath);
+                }
                 string file_name = MRNNo + "_LabelPrint.pdf"; //save the file in unique name 
-                if (System.IO.File.Exists(path1 + "/" + file_name))
-                    System.IO.File.Delete(path1 + "/" + file_name);
+
+                if (System.IO.File.Exists(FilePath + "/" + file_name))
+                    System.IO.File.Delete(FilePath + "/" + file_name);
 
                 //After that use file stream to write from bytes to pdf file on your server path
-                FileStream file = new FileStream(path1 + "/" + file_name, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+                FileStream file = new FileStream(FilePath + "/" + file_name, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 file.Write(bytes, 0, bytes.Length);
                 file.Dispose();
 
-                string filePath = path1 + "/" + file_name;
+                string filePath = FilePath + "/" + file_name;
                 
                 // Create Copy of SAME pdf ON Local Machine 
 
-                string sourcePath = path1;
+                string sourcePath = FilePath;
                 string targetPath = @"C:/Reports_PDF";
 
                 // Use Path class to manipulate file and directory paths.
@@ -429,7 +427,7 @@ namespace WMS_Desktop
                 string NewFilePath = targetPath + "/" + file_name;
                 string AdobeReaderExePath = @"C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe";
                 string DirName = AppDomain.CurrentDomain.BaseDirectory;
-                string dir1 = DirName + @"~\Reports_PDF\";
+                string dir1 = DirName + @"\Reports_PDF\";
 
                 string[] dirs = Directory.GetFiles(dir1, "" + "*.*", SearchOption.AllDirectories);
 
@@ -458,22 +456,19 @@ namespace WMS_Desktop
                         KillAdobe("AcroRd32");
                         File.Delete(dir);
                     }
-
-
-
                 }
+                string message = "Sticker are genrated";
+                MessageBox.Show(message);
                 clear();
                 viewer.LocalReport.Refresh();
 
             }
             catch (Exception ex)
             {
-                // _labelprintingService.SaveLog(ex.Message);
-               // this.LogInfo(ex.Message);
-                
+
+                MessageBox.Show(ex.Message);
             }
         }
-
 
         public void clear()
         {
@@ -488,7 +483,7 @@ namespace WMS_Desktop
 
             int clientid = Convert.ToInt32(cmbBoxClient.SelectedValue);
             string MRNNo = cmbBoxMRNNO.SelectedValue.ToString();
-
+            
             int OrderId = Convert.ToInt32(cmbPONO.SelectedValue);
             int Itemid = Convert.ToInt32(cmbItem.SelectedValue);
             string Itemdesc = txtDescription.Text;
@@ -574,6 +569,8 @@ namespace WMS_Desktop
 
                             //QR code
                             string imgPath1 = @"~\Descripancy_Barcode\QR_" + MRNNo + "_" + barcodeString + ".jpg";
+                          //  string FilePath = string.Format("{0}\\{1}", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "Reports_PDF");
+                          
                             var qrCodeWriter = new ZXing.BarcodeWriterPixelData
                             {
                                 Format = ZXing.BarcodeFormat.QR_CODE,
@@ -610,14 +607,11 @@ namespace WMS_Desktop
                                 }
                             }
 
-
                             string path = string.Format("{0}\\{1}", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), imgPath1);
                             path = "File:///" + path;
 
 
                             ws.tblLabelBarcode.Rows.Add(path, fid);
-
-
                             //MRN Number, PO Number, SO Number, Item Code, Description, Batch Number, Exp. Date, Mfg. Date, MRP, Quantity
                             //if (labelColumnIds.Contains(1))
                             ws.tblLabelPrinting.Rows.Add("Description", dtmrnItems.Rows[i]["ItemDescription"], fid);
@@ -663,23 +657,26 @@ namespace WMS_Desktop
                             //    }
 
                             if (labelColumnIds1.Contains(10))
-                                //ws.tblLabelPrinting.Rows.Add("Quantity", "Unit Qty.: " + dtmrnItems.Rows[i]["UnitQuantity"] + " " + dtmrnItems.Rows[i]["UOM"], fid);
-                                //if (mrnItem.MRP == 0)
-                                //{
-                                //    if (IFMRPIsZero == 1)
-                                //    {
-                                //        wmsDs.tblLabelPrinting.Rows.Add(@ReportRes.MRP, "", fid);
-                                //    }
-                                //}
-
-                                WMSDs1.tblLabelPrinting1.Rows.Add("ItemCode", "Item No.: " + dtmrnItems.Rows[i]["ItemCode1"], fid);
+                                ws.tblLabelPrinting.Rows.Add("Quantity", "Unit Qty.: " + dtmrnItems.Rows[i]["UnitQuantity"] + " " + dtmrnItems.Rows[i]["UOM_Name"], fid);
+                            if (dtmrnItems.Rows[i]["MRPValue"]!=null)
+                            {
+                                if (dtmrnItems.Rows[i]["MRPValue"] == "I")
+                                {
+                                    ws.tblLabelPrinting.Rows.Add("MRP", "Industrial", fid);
+                                }
+                                else if(dtmrnItems.Rows[i]["MRPValue"] == "N")
+                                {
+                                    ws.tblLabelPrinting.Rows.Add("MRP", "Not For sale", fid);
+                                }
+                            }
+                            // WMSDs1.tblLabelPrinting1.Rows.Add("ItemCode", "Item No.: " + dtmrnItems.Rows[i]["ItemCode1"], fid);
                             fid = fid + 1;
                         }
                         //}
                     }
 
                     MRNLabelItem = ws.tblLabelPrinting;
-                    MRNLabelItem1 = WMSDs1.tblLabelPrinting1;
+                   // MRNLabelItem1 = WMSDs1.tblLabelPrinting1;
                 }
 
 
@@ -704,8 +701,8 @@ namespace WMS_Desktop
 
                 ReportParameter[] param = new ReportParameter[3];
                 string strPrintString = "ForIndustrialUseOnly";
-                string CompanyName = "Imp/Pkd. By Atlas Copco (India) Ltd.";
-                string Address = "Atlas Copco (India) Ltd.\nCompressor Technique,Gat No. 397, Vitthalwadi,Lonikand,Pune-\n412216,Maharastra,India. Customer Care No. 020-39852521\nEmail: ctlogistics.helpdesk@in.atlascopco.com";
+                string CompanyName = ConfigurationManager.AppSettings["CompanyName"];
+                string Address = ConfigurationManager.AppSettings["Address"];
 
                 param[0] = new ReportParameter("CompanyName", CompanyName);
                 param[1] = new ReportParameter("Address", Address);
@@ -744,21 +741,35 @@ namespace WMS_Desktop
 
 
                 //Server.MapPath("~/App_Data/
-                string path1 = "~/Reports_PDF";
+               // string path1 = "~/Reports_PDF";
+             
+
+
+                string FilePath = string.Format("{0}\\{1}", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "Reports_PDF");
+                if (!Directory.Exists(FilePath))
+                {
+                    Directory.CreateDirectory(FilePath);
+                }
                 string file_name = MRNNo + "_LabelWithQRPrint.pdf"; //save the file in unique name 
-                if (System.IO.File.Exists(path1 + "/" + file_name))
-                    System.IO.File.Delete(path1 + "/" + file_name);
+
+                if (System.IO.File.Exists(FilePath + "/" + file_name))
+                    System.IO.File.Delete(FilePath + "/" + file_name);
+
+                //if (System.IO.File.Exists(path1 + "/" + file_name))
+                //    System.IO.File.Delete(path1 + "/" + file_name);
 
                 //After that use file stream to write from bytes to pdf file on your server path
-                FileStream file = new FileStream(path1 + "/" + file_name, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+
+
+                FileStream file = new FileStream(FilePath + "/" + file_name, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 file.Write(bytes, 0, bytes.Length);
                 file.Dispose();
 
-                string filePath = path1 + "/" + file_name;
+               // string filePath = path1 + "/" + file_name;
 
                 // Create Copy of SAME pdf ON Local Machine 
 
-                string sourcePath = path1;
+                string sourcePath = FilePath;
                 string targetPath = @"C:/Reports_PDF";
 
                 // Use Path class to manipulate file and directory paths.
@@ -779,7 +790,7 @@ namespace WMS_Desktop
 
                 string AdobeReaderExePath = @"C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe";
                 string DirName = AppDomain.CurrentDomain.BaseDirectory;
-                string dir1 = DirName + @"~\Reports_PDF\";
+                string dir1 = DirName + @"\Reports_PDF\";
                 string[] dirs = Directory.GetFiles(dir1, "" + "*.*", SearchOption.AllDirectories);
 
                 foreach (string dir in dirs)
@@ -808,54 +819,19 @@ namespace WMS_Desktop
                         File.Delete(dir);
                     }
                 }
-
-
-
-
-
-                // this.LogInfo("One");
-
-                // SendToPrinter(filePath);
-                //this.LogInfo("Two");
-                //save print log
-                //  _labelprintingService.SaveLabelPrintingLog(clientid, MRNNo, Itemid, OrderId, 0, Itemdesc, noOfStickers, user.Id, barcodeCombinationid, SelectMRPOrIndustrailuseValue, 1);
-                // _mrnInwardService.SaveLablePrintingLog(clientid, MRNNo, selectedItems, selectedPOs, printAllItems, barcodeType, user.Id, Convert.ToString(noOfStickers));
-
-                //Response.AddHeader("Content-Type", "application/pdf");
-                //bool openInlineCheckBox = false;
-                //byte[] pdfByte = GetBytesFromFile(filePath);
-                //// Instruct the browser to open the PDF file as an attachment or inline
-                ////file_name = "Spear_print_file.pdf";
-                //file_name = "SpearLabel" + "_" + DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss") + ".pdf";
-                // Response.AddHeader("Content-Disposition", String.Format("{0}; filename=" + file_name + "; size={1}", openInlineCheckBox ? "inline" : "attachment", pdfByte.Length.ToString()));
-                // // Write the PDF document buffer to HTTP response
-
-                // Response.BinaryWrite(pdfByte);
-
-
-
-                // // End the HTTP response and stop the current page processing
-                //Response.End();
-
-
-                // Response.AppendHeader("Content-Disposition", "inline; filename=" + file_name + ";");
-                // byte[] pdfByte = GetBytesFromFile(filePath);
-                // return File(pdfByte, "application/pdf");
-
+                string message = "Sticker are genrated";
+                MessageBox.Show(message);
                 viewer.LocalReport.Refresh();
-
+                clear();
             }
             catch (Exception ex)
             {
-                // _labelprintingService.SaveLog(ex.Message);
-                // this.LogInfo(ex.Message);
+                MessageBox.Show(ex.Message);
 
             }
         }
-
-
-
-      private static bool KillAdobe(string name)
+        
+        private static bool KillAdobe(string name)
         {
             foreach (Process clsProcess in Process.GetProcesses().Where(
                          clsProcess => clsProcess.ProcessName.StartsWith(name)))

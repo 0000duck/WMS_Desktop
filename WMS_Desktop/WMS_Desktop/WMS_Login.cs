@@ -57,7 +57,7 @@ namespace WMS_Desktop
             {
                 LoginVO loginVO = new LoginVO();
                 loginVO.WarehouseId = Convert.ToInt32(cmbWarehouse.SelectedValue);
-                loginVO.UserId = txtUsername.Text.Trim();
+                loginVO.Username = txtUsername.Text.Trim();
                 loginVO.Password = txtPassword.Text.Trim();
 
                 DataTable dt = _dal_Login.GetLoginDetails(loginVO);
