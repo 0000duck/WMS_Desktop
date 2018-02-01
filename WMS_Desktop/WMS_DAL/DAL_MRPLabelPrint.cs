@@ -23,24 +23,26 @@ namespace WMS_DAL
 
         public DataTable GetClientList()
         {
-            string query = string.Format("Sp_GetClientList");
+            string query = string.Format("SpGetClientList");
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return conn.executeSelectQuery(query, sqlParameters);
         }
 
         public DataTable GetClientMRNNO( int Client_Id)
         {
-            string query = string.Format("Sp_GetMRNNO");
+            string query = string.Format("SpGetMRNNO");
             SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@ClientId", Client_Id);
+            sqlParameters[0] = new SqlParameter("@ClientId", SqlDbType.Int);
+            sqlParameters[0].Value = Client_Id;
             return conn.executeSelectQuery(query, sqlParameters);
         }
 
         public DataTable GetPONO(string MRNNo)
         {
-            string query = string.Format("Sp_GetPONo");
+            string query = string.Format("SpGetPONo");
             SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@MRNNo", MRNNo);
+            sqlParameters[0] = new SqlParameter("@MRNNo", SqlDbType.VarChar);
+            sqlParameters[0].Value = MRNNo;
             return conn.executeSelectQuery(query, sqlParameters);
         }
 
@@ -49,14 +51,16 @@ namespace WMS_DAL
             string ItemCode = string.Empty;
             DataTable dt = new DataTable();
             string query = string.Format("spGetItemsCode");
+            
             SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@ItemId", ItemId);
+            sqlParameters[0] = new SqlParameter("@ItemId", SqlDbType.Int);
+            sqlParameters[0].Value = ItemId;
+
             dt= conn.executeSelectQuery(query, sqlParameters);
             if (dt.Rows.Count > 0)
             {
                 ItemCode = (dt.Rows[0]["ItemCode"].ToString());
             }
-
             return ItemCode;
         }
 
@@ -64,16 +68,20 @@ namespace WMS_DAL
         {
             string query = string.Format("spGetItems");
             SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@OrderId", OrderId);
+            
+            sqlParameters[0] = new SqlParameter("@OrderId", SqlDbType.Int);
+            sqlParameters[0].Value = OrderId;
+
             return conn.executeSelectQuery(query, sqlParameters);
         }
 
-
         public DataTable GetPreferenceById(int clientId)
         {
-            string query = string.Format("Sp_GetPreferenceById");
+            string query = string.Format("SpGetPreferenceById");
             SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@ClientId", clientId);
+            sqlParameters[0] = new SqlParameter("@ClientId", SqlDbType.Int);
+            sqlParameters[0].Value = clientId;
+
             return conn.executeSelectQuery(query, sqlParameters);
         }
 
@@ -81,9 +89,11 @@ namespace WMS_DAL
         {
             int result = 0;
             DataTable dt = new DataTable();
-            string query = string.Format("sp_GetPickingStrategyOfItem");
+            string query = string.Format("spGetPickingStrategyOfItem");
             SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@ItemId", ItemId);
+            sqlParameters[0] = new SqlParameter("@ItemId", SqlDbType.Int);
+            sqlParameters[0].Value = ItemId;
+
            dt = conn.executeSelectQuery(query, sqlParameters);
 
            if (dt.Rows.Count > 0)
@@ -115,14 +125,27 @@ namespace WMS_DAL
 
         public DataTable GetItemDetailsForLablePrinting(MRPPrintModel m)
         {
-            string query = string.Format("Sp_GetItemDetailsForLablePrinting");
+            string query = string.Format("SpGetItemDetailsForLablePrinting");
             SqlParameter[] sqlParameters = new SqlParameter[4];
-            sqlParameters[0] = new SqlParameter("@ClientId", m.Client_Id);
-            sqlParameters[1] = new SqlParameter("@MRNNo", m.MRNNo);
-            sqlParameters[2] = new SqlParameter("@itemCode", m.itemCode);
-            sqlParameters[3] = new SqlParameter("@OrderId", m.OrderId);
+            sqlParameters[0] = new SqlParameter("@ClientId", SqlDbType.Int);
+            sqlParameters[0].Value = m.Client_Id;
+
+            sqlParameters[1] = new SqlParameter("@MRNNo",SqlDbType.VarChar);
+            sqlParameters[1].Value = m.MRNNo;
+
+            sqlParameters[2] = new SqlParameter("@itemCode", SqlDbType.VarChar);
+            sqlParameters[2].Value = m.itemCode;
+
+            sqlParameters[3] = new SqlParameter("@OrderId", SqlDbType.Int);
+            sqlParameters[3].Value = m.OrderId;
+
             return conn.executeSelectQuery(query, sqlParameters);
         }
+
+       
+
+
+        
         
     }
 

@@ -211,11 +211,8 @@ F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_D
 F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csproj.GenerateResource.Cache
 F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.cache
 F:\rahul\30-1-18\31-1-18\30-1-18 Evening\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.compiled
-F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe.config
-F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.exe
-F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.pdb
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe
-F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.pdb
+F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.exe.config
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.Common.dll
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
@@ -235,3 +232,6 @@ F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.WMS_Master.re
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.csproj.GenerateResource.Cache
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.cache
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\RdlCompile.compiled
+F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.exe
+F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\obj\Debug\WMS_Desktop.pdb
+F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Desktop\bin\Debug\WMS_Desktop.pdb

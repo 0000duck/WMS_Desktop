@@ -108,6 +108,8 @@
             this.txtCharRightShift.Name = "txtCharRightShift";
             this.txtCharRightShift.Size = new System.Drawing.Size(176, 20);
             this.txtCharRightShift.TabIndex = 16;
+            this.txtCharRightShift.Text = "0";
+            this.txtCharRightShift.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // cmbItem
             // 
@@ -187,6 +189,8 @@
             this.txtNoOfStricker.Name = "txtNoOfStricker";
             this.txtNoOfStricker.Size = new System.Drawing.Size(167, 20);
             this.txtNoOfStricker.TabIndex = 7;
+            this.txtNoOfStricker.Text = "1";
+            this.txtNoOfStricker.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtCharLeftShift
             // 
@@ -194,6 +198,8 @@
             this.txtCharLeftShift.Name = "txtCharLeftShift";
             this.txtCharLeftShift.Size = new System.Drawing.Size(167, 20);
             this.txtCharLeftShift.TabIndex = 6;
+            this.txtCharLeftShift.Text = "0";
+            this.txtCharLeftShift.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
