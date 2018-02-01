@@ -79,3 +79,12 @@ F:\rahul\WMS_Desktop\WMS_Desktop\WMS_DAL\bin\Debug\WMS_Models.pdb
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_DAL\obj\Debug\WMS_DAL.csprojResolveAssemblyReference.cache
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_DAL\obj\Debug\WMS_DAL.dll
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_DAL\obj\Debug\WMS_DAL.pdb
+D:\SpearCommunity\Spear\WMS_Desktop\WMS_DAL\bin\Debug\WMS_DAL.dll
+D:\SpearCommunity\Spear\WMS_Desktop\WMS_DAL\bin\Debug\WMS_DAL.pdb
+D:\SpearCommunity\Spear\WMS_Desktop\WMS_DAL\bin\Debug\WMS_Core.dll
+D:\SpearCommunity\Spear\WMS_Desktop\WMS_DAL\bin\Debug\WMS_Models.dll
+D:\SpearCommunity\Spear\WMS_Desktop\WMS_DAL\bin\Debug\WMS_Core.pdb
+D:\SpearCommunity\Spear\WMS_Desktop\WMS_DAL\bin\Debug\WMS_Models.pdb
+D:\SpearCommunity\Spear\WMS_Desktop\WMS_DAL\obj\Debug\WMS_DAL.csprojResolveAssemblyReference.cache
+D:\SpearCommunity\Spear\WMS_Desktop\WMS_DAL\obj\Debug\WMS_DAL.dll
+D:\SpearCommunity\Spear\WMS_Desktop\WMS_DAL\obj\Debug\WMS_DAL.pdb
