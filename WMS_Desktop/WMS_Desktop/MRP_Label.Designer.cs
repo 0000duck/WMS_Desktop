@@ -101,6 +101,8 @@
             this.txtDescription.Size = new System.Drawing.Size(176, 20);
             this.txtDescription.TabIndex = 17;
             this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
+            this.txtDescription.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescription_KeyPress);
+            this.txtDescription.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDescription_KeyUp);
             // 
             // txtCharRightShift
             // 

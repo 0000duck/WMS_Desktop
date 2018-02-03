@@ -66,6 +66,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MRN_PrinrtLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MRN_PrinrtLabel.Designer.cs">
+      <DependentUpon>MRN_PrinrtLabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="MRPLabelPrint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     </Compile>
     <Compile Include="MRP_Label.Designer.cs">
       <DependentUpon>MRP_Label.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackingSlip_Mannual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackingSlip_Mannual.Designer.cs">
+      <DependentUpon>PackingSlip_Mannual.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,11 +128,17 @@
     <Compile Include="WMS_Master.Designer.cs">
       <DependentUpon>WMS_Master.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MRN_PrinrtLabel.resx">
+      <DependentUpon>MRN_PrinrtLabel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MRPLabelPrint.resx">
       <DependentUpon>MRPLabelPrint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MRP_Label.resx">
       <DependentUpon>MRP_Label.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackingSlip_Mannual.resx">
+      <DependentUpon>PackingSlip_Mannual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -29,7 +29,7 @@ namespace WMS_Desktop
         private MRPPrintModel MrpModel;
         public DataTable MRNLabelItem = new DataTable();
         public DataTable MRNLabelItem1 = new DataTable();
-        public string MRPValueMRP=string.Empty;
+        public string MRPValueMRP = string.Empty;
 
         public MRP_Label()
         {
@@ -70,7 +70,7 @@ namespace WMS_Desktop
                 cmbBoxMRNNO.DisplayMember = "MRNNo";
                 cmbBoxMRNNO.ValueMember = "MRNNo";
                 cmbBoxMRNNO.DataSource = dt;
-              
+
             }
         }
 
@@ -84,7 +84,7 @@ namespace WMS_Desktop
                 cmbPONO.DisplayMember = "PONumber";
                 cmbPONO.ValueMember = "OrderId";
                 cmbPONO.DataSource = dt;
-             
+
             }
         }
 
@@ -96,14 +96,14 @@ namespace WMS_Desktop
 
         private void cmbPONO_SelectedIndexChanged(object sender, EventArgs e)
         {
-             int OrderId = Convert.ToInt32(cmbPONO.SelectedValue);
-             DataTable dt = _dal_MrpPrint.GetItems(OrderId);
+            int OrderId = Convert.ToInt32(cmbPONO.SelectedValue);
+            DataTable dt = _dal_MrpPrint.GetItems(OrderId);
             if (dt != null && dt.Rows.Count > 0)
             {
                 DataRow dr = dt.NewRow();
                 //dr.ItemArray = new object[] { 0, "-- Select Item --", "-- Select Item --" };
                 //dt.Rows.InsertAt(dr, 0);
-               
+
                 cmbItem.DisplayMember = "itemCode";
                 cmbItem.ValueMember = "id";
                 cmbItem.DataSource = dt;
@@ -138,11 +138,11 @@ namespace WMS_Desktop
             string Itemcode = _dal_MrpPrint.GetItemsCode(Convert.ToInt32(cmbItem.SelectedValue));
             if (txtDescription.Text.Trim() == Itemcode.ToString().Trim())
             {
-                if (rdbtnBarcode.Checked == true )
+                if (rdbtnBarcode.Checked == true)
                 {
                     PrintBarcode();
                 }
-                else 
+                else
                 {
                     //Qr code
                     PrintLabelForQRCode();
@@ -160,9 +160,9 @@ namespace WMS_Desktop
         {
             string strParameter = e.Parameters["FID"].Values[0].ToString();
             DataTable dt = MRNLabelItem;
-             DataTable dts = dt.Select("FID = '" + strParameter + "'").CopyToDataTable();
-             ReportDataSource rds = new ReportDataSource("dsWMS", dts);
-             e.DataSources.Add(rds);
+            DataTable dts = dt.Select("FID = '" + strParameter + "'").CopyToDataTable();
+            ReportDataSource rds = new ReportDataSource("dsWMS", dts);
+            e.DataSources.Add(rds);
         }
 
         //void LocalReportLabel_SubreportProcessing1(object sender, Microsoft.Reporting.WinForms.SubreportProcessingEventArgs e)
@@ -189,7 +189,7 @@ namespace WMS_Desktop
             WMSData ws = new WMSData();
             WhsData WMSDs1 = new WhsData();
             DataTable dt = new DataTable();
-          
+
             try
             {
                 // var user = WMSWebSession.GetInstance().User;
@@ -197,17 +197,17 @@ namespace WMS_Desktop
                 string labelColumnId = dt.Rows[0][0].ToString();
                 int[] labelColumnIds1= new int[10];
                 int a=0;
-                foreach (var i in labelColumnId.Split(',')) 
+                foreach (var i in labelColumnId.Split(','))
                 {
                     labelColumnIds1[a] = Convert.ToInt32 (i);
                     a++;
                 }
-             
+
                 // Get picking strategy of Item 
-               
+
                 int ItemId=Convert.ToInt32(cmbItem.SelectedValue);
                 var PickingStrategy = _dal_MrpPrint.GetPickingStrategyOfItem(ItemId);
-                
+
                 if (PickingStrategy == 1)
                 {
                     barcodeCombinationid = 3;
@@ -217,17 +217,17 @@ namespace WMS_Desktop
                     barcodeCombinationid = 4;
                 }
 
-                string barcodeType = barcodeCombinationid == 1 ?"OnlyItemCode" : (barcodeCombinationid == 2 ?"ItemCodeMRNNo" : (barcodeCombinationid == 3 ? "ItemCodePONo" : (barcodeCombinationid == 4 ? "ItemCodeBatchNo" : "ItemCodeSerialNo")));
+                string barcodeType = barcodeCombinationid == 1 ? "OnlyItemCode" : (barcodeCombinationid == 2 ? "ItemCodeMRNNo" : (barcodeCombinationid == 3 ? "ItemCodePONo" : (barcodeCombinationid == 4 ? "ItemCodeBatchNo" : "ItemCodeSerialNo")));
 
                 //DataSet dsmrnItems = new DataSet(); 
                 DataTable dtmrnItems = new DataTable();
-              
+
                 MrpModel.Client_Id = clientid;
                 MrpModel.MRNNo = MRNNo.ToString();
                 string itemCode = _dal_MrpPrint.GetItemsCode(Convert.ToInt32(cmbItem.SelectedValue));
                 MrpModel.itemCode = itemCode.ToString().Trim();
                 MrpModel.OrderId = OrderId;
-               
+
                 dtmrnItems = _dal_MrpPrint.GetItemDetailsForLablePrinting(MrpModel);
 
                 if (dtmrnItems != null && dtmrnItems.Rows.Count > 0)
@@ -276,9 +276,9 @@ namespace WMS_Desktop
                             //string path = AppDomain.CurrentDomain.BaseDirectory + imgPath;
                             string path = string.Format("{0}\\{1}", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), imgPath);
                             path = "File:///" + path;
-    
+
                             ws.tblLabelBarcode.Rows.Add(path, fid);
-                           
+
                             //if (labelColumnIds.Contains(1))
                             ws.tblLabelPrinting.Rows.Add("Description", dtmrnItems.Rows[i]["ItemDescription"], fid);
                             //if (labelColumnIds.Contains(2))
@@ -324,16 +324,24 @@ namespace WMS_Desktop
 
                             if (labelColumnIds1.Contains(10))
                                 ws.tblLabelPrinting.Rows.Add("Quantity", "Unit Qty.: " + dtmrnItems.Rows[i]["UnitQuantity"] + " " + dtmrnItems.Rows[i]["UOM_Name"], fid);
-                            if (dtmrnItems.Rows[i]["MRPValue"] != null)
+
+                            if (Convert.ToDouble(dtmrnItems.Rows[i]["MRP"]) == 0.0)
                             {
-                                if (dtmrnItems.Rows[i]["MRPValue"] == "I")
+                                if (dtmrnItems.Rows[i]["MRPValue"] != null || dtmrnItems.Rows[i]["MRPValue"] != " ")
                                 {
-                                    ws.tblLabelPrinting.Rows.Add("MRP", "Industrial", fid);
+                                    if (dtmrnItems.Rows[i]["MRPValue"] == "I")
+                                    {
+                                        ws.tblLabelPrinting.Rows.Add("MRP", "Industrial", fid);
+                                    }
+                                    else if (dtmrnItems.Rows[i]["MRPValue"] == "N")
+                                    {
+                                        ws.tblLabelPrinting.Rows.Add("MRP", "Not For sale", fid);
+                                    }
                                 }
-                                else if (dtmrnItems.Rows[i]["MRPValue"] == "N")
-                                {
-                                    ws.tblLabelPrinting.Rows.Add("MRP", "Not For sale", fid);
-                                }
+                            }
+                            else
+                            {
+                                ws.tblLabelPrinting.Rows.Add("MRP", Convert.ToDouble(dtmrnItems.Rows[i]["MRP"]), fid);
                             }
                             fid = fid + 1;
                         }
@@ -341,7 +349,7 @@ namespace WMS_Desktop
                     }
 
                     MRNLabelItem = ws.tblLabelPrinting;
-                   // MRNLabelItem1 = WMSDs1.tblLabelPrinting1;
+                    // MRNLabelItem1 = WMSDs1.tblLabelPrinting1;
                 }
                 // Variables
                 Warning[] warnings;
@@ -360,7 +368,7 @@ namespace WMS_Desktop
                 viewer.LocalReport.DataSources.Clear();
                 viewer.LocalReport.DataSources.Add(rds);
                 viewer.LocalReport.EnableExternalImages = true;
-                
+
                 ReportParameter[] param = new ReportParameter[3];
 
                 string strPrintString = "";
@@ -375,7 +383,7 @@ namespace WMS_Desktop
                 //string strPrintString = SelectMRPOrIndustrailuseValue == 3 ? ReportRes.ForIndustrialUseOnly : (SelectMRPOrIndustrailuseValue == 4 ? ReportRes.NotForRetailSale : string.Empty);
                 //param[0] = new ReportParameter("PrintString", strPrintString);
                 //viewer.LocalReport.SetParameters(param);
-               // viewer.LocalReport.Refresh();
+                // viewer.LocalReport.Refresh();
 
                 string subreportPath = "~/Report/rptAtlasCopcoItemsBarcode.rdlc";
                 using (System.IO.Stream report = System.IO.File.OpenRead(subreportPath))
@@ -385,9 +393,9 @@ namespace WMS_Desktop
                 viewer.LocalReport.SubreportProcessing +=
                    new Microsoft.Reporting.WinForms.SubreportProcessingEventHandler(LocalReportLabel_SubreportProcessing);
 
-                byte[]  bytes = viewer.LocalReport.Render("PDF", null, out mimeType, out encoding, out extension, out streamIds, out warnings);
+                byte[]bytes = viewer.LocalReport.Render("PDF", null, out mimeType, out encoding, out extension, out streamIds, out warnings);
 
-                
+
                 string FilePath = string.Format("{0}\\{1}", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "Reports_PDF");
                 if (!Directory.Exists(FilePath))
                 {
@@ -403,28 +411,28 @@ namespace WMS_Desktop
                 file.Write(bytes, 0, bytes.Length);
                 file.Dispose();
 
-                string filePath = FilePath + "/" + file_name;
-                
+                //string filePath = FilePath + "/" + file_name;
+
                 // Create Copy of SAME pdf ON Local Machine 
 
-                string sourcePath = FilePath;
-                string targetPath = @"C:/Reports_PDF";
+                //string sourcePath = FilePath;
+                //string targetPath = @"C:/Reports_PDF";
 
-                // Use Path class to manipulate file and directory paths.
-                string sourceFile = System.IO.Path.Combine(sourcePath, file_name);
-                string destFile = System.IO.Path.Combine(targetPath, file_name);
+                //// Use Path class to manipulate file and directory paths.
+                //string sourceFile = System.IO.Path.Combine(sourcePath, file_name);
+                //string destFile = System.IO.Path.Combine(targetPath, file_name);
 
-                // To copy a folder's contents to a new location:
-                // Create a new target folder, if necessary.
-                if (!System.IO.Directory.Exists(targetPath))
-                {
-                    System.IO.Directory.CreateDirectory(targetPath);
-                }
+                //// To copy a folder's contents to a new location:
+                //// Create a new target folder, if necessary.
+                //if (!System.IO.Directory.Exists(targetPath))
+                //{
+                //    System.IO.Directory.CreateDirectory(targetPath);
+                //}
 
-                // To copy a file to another location and 
-                // overwrite the destination file if it already exists.
-                System.IO.File.Copy(sourceFile, destFile, true);
-                string NewFilePath = targetPath + "/" + file_name;
+                //// To copy a file to another location and 
+                //// overwrite the destination file if it already exists.
+                //System.IO.File.Copy(sourceFile, destFile, true);
+                //string NewFilePath = targetPath + "/" + file_name;
                 string AdobeReaderExePath = @"C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe";
                 string DirName = AppDomain.CurrentDomain.BaseDirectory;
                 string dir1 = DirName + @"\Reports_PDF\";
@@ -483,7 +491,7 @@ namespace WMS_Desktop
 
             int clientid = Convert.ToInt32(cmbBoxClient.SelectedValue);
             string MRNNo = cmbBoxMRNNO.SelectedValue.ToString();
-            
+
             int OrderId = Convert.ToInt32(cmbPONO.SelectedValue);
             int Itemid = Convert.ToInt32(cmbItem.SelectedValue);
             string Itemdesc = txtDescription.Text;
@@ -569,8 +577,8 @@ namespace WMS_Desktop
 
                             //QR code
                             string imgPath1 = @"~\Descripancy_Barcode\QR_" + MRNNo + "_" + barcodeString + ".jpg";
-                          //  string FilePath = string.Format("{0}\\{1}", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "Reports_PDF");
-                          
+                            //  string FilePath = string.Format("{0}\\{1}", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "Reports_PDF");
+
                             var qrCodeWriter = new ZXing.BarcodeWriterPixelData
                             {
                                 Format = ZXing.BarcodeFormat.QR_CODE,
@@ -658,7 +666,7 @@ namespace WMS_Desktop
 
                             if (labelColumnIds1.Contains(10))
                                 ws.tblLabelPrinting.Rows.Add("Quantity", "Unit Qty.: " + dtmrnItems.Rows[i]["UnitQuantity"] + " " + dtmrnItems.Rows[i]["UOM_Name"], fid);
-                            if (dtmrnItems.Rows[i]["MRPValue"]!=null)
+                            if (dtmrnItems.Rows[i]["MRPValue"]!= null)
                             {
                                 if (dtmrnItems.Rows[i]["MRPValue"] == "I")
                                 {
@@ -676,7 +684,7 @@ namespace WMS_Desktop
                     }
 
                     MRNLabelItem = ws.tblLabelPrinting;
-                   // MRNLabelItem1 = WMSDs1.tblLabelPrinting1;
+                    // MRNLabelItem1 = WMSDs1.tblLabelPrinting1;
                 }
 
 
@@ -709,7 +717,7 @@ namespace WMS_Desktop
                 param[2] = new ReportParameter("PrintString", strPrintString);
                 viewer.LocalReport.SetParameters(param);
 
-               // viewer.LocalReport.Refresh();
+                // viewer.LocalReport.Refresh();
                 // string strPrintString = SelectMRPOrIndustrailuseValue == 3 ? ReportRes.ForIndustrialUseOnly : (SelectMRPOrIndustrailuseValue == 4 ? ReportRes.NotForRetailSale : string.Empty);
                 //param[0] = new ReportParameter("PrintString", strPrintString);
                 //viewer.LocalReport.SetParameters(param);
@@ -741,8 +749,8 @@ namespace WMS_Desktop
 
 
                 //Server.MapPath("~/App_Data/
-               // string path1 = "~/Reports_PDF";
-             
+                // string path1 = "~/Reports_PDF";
+
 
 
                 string FilePath = string.Format("{0}\\{1}", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "Reports_PDF");
@@ -765,28 +773,28 @@ namespace WMS_Desktop
                 file.Write(bytes, 0, bytes.Length);
                 file.Dispose();
 
-               // string filePath = path1 + "/" + file_name;
+                // string filePath = path1 + "/" + file_name;
 
                 // Create Copy of SAME pdf ON Local Machine 
 
-                string sourcePath = FilePath;
-                string targetPath = @"C:/Reports_PDF";
+                //string sourcePath = FilePath;
+                //string targetPath = @"C:/Reports_PDF";
 
-                // Use Path class to manipulate file and directory paths.
-                string sourceFile = System.IO.Path.Combine(sourcePath, file_name);
-                string destFile = System.IO.Path.Combine(targetPath, file_name);
+                //// Use Path class to manipulate file and directory paths.
+                //string sourceFile = System.IO.Path.Combine(sourcePath, file_name);
+                //string destFile = System.IO.Path.Combine(targetPath, file_name);
 
-                // To copy a folder's contents to a new location:
-                // Create a new target folder, if necessary.
-                if (!System.IO.Directory.Exists(targetPath))
-                {
-                    System.IO.Directory.CreateDirectory(targetPath);
-                }
+                //// To copy a folder's contents to a new location:
+                //// Create a new target folder, if necessary.
+                //if (!System.IO.Directory.Exists(targetPath))
+                //{
+                //    System.IO.Directory.CreateDirectory(targetPath);
+                //}
 
-                // To copy a file to another location and 
-                // overwrite the destination file if it already exists.
-                System.IO.File.Copy(sourceFile, destFile, true);
-                string NewFilePath = targetPath + "/" + file_name;
+                //// To copy a file to another location and 
+                //// overwrite the destination file if it already exists.
+                //System.IO.File.Copy(sourceFile, destFile, true);
+                //string NewFilePath = targetPath + "/" + file_name;
 
                 string AdobeReaderExePath = @"C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe";
                 string DirName = AppDomain.CurrentDomain.BaseDirectory;
@@ -830,18 +838,49 @@ namespace WMS_Desktop
 
             }
         }
-        
+
         private static bool KillAdobe(string name)
         {
             foreach (Process clsProcess in Process.GetProcesses().Where(
                          clsProcess => clsProcess.ProcessName.StartsWith(name)))
             {
-                 clsProcess.Kill();
-                 return true;
+                clsProcess.Kill();
+                return true;
             }
             return false;
         }
 
-      
+
+        // code for Scanning on click enter
+
+        private void txtDescription_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            //if (e.KeyChar == (char)Keys.Return)
+            //{
+            //    // the enter key was pressed
+            //    string Itemcode = _dal_MrpPrint.GetItemsCode(Convert.ToInt32(cmbItem.SelectedValue));
+            //    if (txtDescription.Text.Trim() == Itemcode.ToString().Trim())
+            //    {
+            //        if (rdbtnBarcode.Checked == true)
+            //        {
+            //            PrintBarcode();
+            //        }
+            //        else
+            //        {
+            //            //Qr code
+            //            PrintLabelForQRCode();
+            //        }
+            //    }
+            //}
+        }
+
+
+        private void txtDescription_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+
+
     }
 }

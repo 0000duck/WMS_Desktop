@@ -112,5 +112,11 @@ namespace WMS_Desktop
             mrplabel.MdiParent = this.MdiParent;
             mrplabel.Show();
         }
+
+        private void packingSlipMannualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PackingSlip_Mannual pack = new PackingSlip_Mannual();
+            pack.Show();
+        }
     }
 }

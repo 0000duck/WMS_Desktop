@@ -17,6 +17,8 @@ namespace WMS_Desktop
     {
         private DAL_Login _dal_Login;
         private DAL_Warehouse _dal_Warehouse;
+        public string UserId = string.Empty;
+
         public WMS_Login()
         {
             InitializeComponent();
@@ -65,8 +67,11 @@ namespace WMS_Desktop
                 {
 
                     this.Hide();
+                    UserId = dt.Rows[0]["Id"].ToString();
+                    LoginInfo.UserID = dt.Rows[0]["Id"].ToString();
                     WMS_Master master = new WMS_Master();
                     master.Show();
+
                 }
                 else
                 {
@@ -134,5 +139,10 @@ namespace WMS_Desktop
         //    return ByteArraysEqual(buffer3, buffer4);
         //}
 
+    }
+
+    public static class LoginInfo
+    {
+        public static string UserID;
     }
 }

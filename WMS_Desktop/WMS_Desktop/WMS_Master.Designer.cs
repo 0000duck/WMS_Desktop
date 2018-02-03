@@ -33,10 +33,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mRPLabelPrintingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelPrintingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.packingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelPrintingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.packingSlipMannualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +57,8 @@
             // 
             this.masterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mRPLabelPrintingToolStripMenuItem,
-            this.labelPrintingToolStripMenuItem});
+            this.labelPrintingToolStripMenuItem,
+            this.packingSlipMannualToolStripMenuItem});
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
             this.masterToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.masterToolStripMenuItem.Text = "Master";
@@ -64,9 +66,16 @@
             // mRPLabelPrintingToolStripMenuItem
             // 
             this.mRPLabelPrintingToolStripMenuItem.Name = "mRPLabelPrintingToolStripMenuItem";
-            this.mRPLabelPrintingToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.mRPLabelPrintingToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.mRPLabelPrintingToolStripMenuItem.Text = "MRP Label Printing";
             this.mRPLabelPrintingToolStripMenuItem.Click += new System.EventHandler(this.mRPLabelPrintingToolStripMenuItem_Click);
+            // 
+            // labelPrintingToolStripMenuItem
+            // 
+            this.labelPrintingToolStripMenuItem.Name = "labelPrintingToolStripMenuItem";
+            this.labelPrintingToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.labelPrintingToolStripMenuItem.Text = "Label Printing";
+            this.labelPrintingToolStripMenuItem.Click += new System.EventHandler(this.labelPrintingToolStripMenuItem_Click);
             // 
             // transactionToolStripMenuItem
             // 
@@ -88,12 +97,12 @@
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
-            // labelPrintingToolStripMenuItem
+            // packingSlipMannualToolStripMenuItem
             // 
-            this.labelPrintingToolStripMenuItem.Name = "labelPrintingToolStripMenuItem";
-            this.labelPrintingToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.labelPrintingToolStripMenuItem.Text = "Label Printing";
-            this.labelPrintingToolStripMenuItem.Click += new System.EventHandler(this.labelPrintingToolStripMenuItem_Click);
+            this.packingSlipMannualToolStripMenuItem.Name = "packingSlipMannualToolStripMenuItem";
+            this.packingSlipMannualToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.packingSlipMannualToolStripMenuItem.Text = "PackingSlipMannual";
+            this.packingSlipMannualToolStripMenuItem.Click += new System.EventHandler(this.packingSlipMannualToolStripMenuItem_Click);
             // 
             // WMS_Master
             // 
@@ -125,6 +134,7 @@
         private System.Windows.Forms.ToolStripMenuItem mRPLabelPrintingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem packingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem labelPrintingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem packingSlipMannualToolStripMenuItem;
     }
 }
 
