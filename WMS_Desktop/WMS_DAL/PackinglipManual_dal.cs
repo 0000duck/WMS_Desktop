@@ -23,7 +23,7 @@ namespace WMS_DAL
             int ClientId = 0;
             DataTable dt = new DataTable();
             string query = string.Format("spClientIdbyUserId");
-
+           
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@UserId", SqlDbType.VarChar);
             sqlParameters[0].Value = UserId;
@@ -51,5 +51,28 @@ namespace WMS_DAL
             sqlParameters[0].Value = ClientId;
             return conn.executeSelectQuery(query, sqlParameters);
         }
+
+        public DataTable GetPicklistNo(int ShiftTOId)
+        {
+            string query = string.Format("spGetPicklistNo");
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@ShiftToId", SqlDbType.Int);
+            sqlParameters[0].Value = ShiftTOId;
+            return conn.executeSelectQuery(query, sqlParameters);
+        }
+
+
+        public DataTable GetPicklistDetail(string picklistNo ,int ClientId)
+        {
+            string query = string.Format("spGetPicklistDetail");
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@PicklistNo", SqlDbType.VarChar);
+            sqlParameters[0].Value = picklistNo;
+            sqlParameters[1] = new SqlParameter("@ClientId", SqlDbType.Int);
+            sqlParameters[1].Value = ClientId;
+            return conn.executeSelectQuery(query, sqlParameters);
+        }
+
+
     }
 }

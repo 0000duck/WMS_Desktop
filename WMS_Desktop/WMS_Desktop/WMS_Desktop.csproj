@@ -90,6 +90,12 @@
     <Compile Include="PackingSlip_Mannual.Designer.cs">
       <DependentUpon>PackingSlip_Mannual.cs</DependentUpon>
     </Compile>
+    <Compile Include="Packing_Mannual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing_Mannual.Designer.cs">
+      <DependentUpon>Packing_Mannual.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WhsData.cs">
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PackingSlip_Mannual.resx">
       <DependentUpon>PackingSlip_Mannual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing_Mannual.resx">
+      <DependentUpon>Packing_Mannual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

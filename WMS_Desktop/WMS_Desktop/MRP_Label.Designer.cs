@@ -308,24 +308,24 @@
             // rdbtnQRCode
             // 
             this.rdbtnQRCode.AutoSize = true;
-            this.rdbtnQRCode.Checked = true;
             this.rdbtnQRCode.Image = ((System.Drawing.Image)(resources.GetObject("rdbtnQRCode.Image")));
             this.rdbtnQRCode.Location = new System.Drawing.Point(426, 34);
             this.rdbtnQRCode.Name = "rdbtnQRCode";
             this.rdbtnQRCode.Size = new System.Drawing.Size(480, 131);
             this.rdbtnQRCode.TabIndex = 1;
-            this.rdbtnQRCode.TabStop = true;
             this.rdbtnQRCode.UseVisualStyleBackColor = true;
             // 
             // rdbtnBarcode
             // 
             this.rdbtnBarcode.AutoSize = true;
+            this.rdbtnBarcode.Checked = true;
             this.rdbtnBarcode.Image = ((System.Drawing.Image)(resources.GetObject("rdbtnBarcode.Image")));
             this.rdbtnBarcode.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.rdbtnBarcode.Location = new System.Drawing.Point(30, 34);
             this.rdbtnBarcode.Name = "rdbtnBarcode";
             this.rdbtnBarcode.Size = new System.Drawing.Size(379, 184);
             this.rdbtnBarcode.TabIndex = 0;
+            this.rdbtnBarcode.TabStop = true;
             this.rdbtnBarcode.UseVisualStyleBackColor = true;
             // 
             // MRP_Label

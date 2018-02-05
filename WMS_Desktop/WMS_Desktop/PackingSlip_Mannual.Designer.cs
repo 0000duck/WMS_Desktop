@@ -43,20 +43,6 @@
             this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpCartonDetail = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PONumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SONumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BatchNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TransType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LocationCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PickedQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PackedQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BalanceQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BoxNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Carton = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Grossweight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Netweight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTotalQty = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtUOM = new System.Windows.Forms.TextBox();
@@ -68,10 +54,28 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblCartoncode = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.CmbPicklistNo = new System.Windows.Forms.ComboBox();
+            this.lblPicklist = new System.Windows.Forms.Label();
+            this.ItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PONumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SONumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BatchNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TransType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LocationCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PickedQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PackedQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BalanceQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BoxNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Carton = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grossweight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Netweight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPicklist)).BeginInit();
             this.grpCartonDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -152,7 +156,7 @@
             this.TotalItems,
             this.TotalQuantity,
             this.TotalAmount});
-            this.dataGridViewPicklist.Location = new System.Drawing.Point(26, 113);
+            this.dataGridViewPicklist.Location = new System.Drawing.Point(26, 180);
             this.dataGridViewPicklist.Name = "dataGridViewPicklist";
             this.dataGridViewPicklist.Size = new System.Drawing.Size(1008, 67);
             this.dataGridViewPicklist.TabIndex = 0;
@@ -202,7 +206,7 @@
             this.grpCartonDetail.Controls.Add(this.label2);
             this.grpCartonDetail.Controls.Add(this.lblCartoncode);
             this.grpCartonDetail.Controls.Add(this.label1);
-            this.grpCartonDetail.Location = new System.Drawing.Point(26, 186);
+            this.grpCartonDetail.Location = new System.Drawing.Point(26, 267);
             this.grpCartonDetail.Name = "grpCartonDetail";
             this.grpCartonDetail.Size = new System.Drawing.Size(1008, 464);
             this.grpCartonDetail.TabIndex = 2;
@@ -235,94 +239,7 @@
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
-            // 
-            // ItemCode
-            // 
-            this.ItemCode.HeaderText = "Item Code";
-            this.ItemCode.Name = "ItemCode";
-            this.ItemCode.Width = 80;
-            // 
-            // ItemDescription
-            // 
-            this.ItemDescription.HeaderText = "Item Description";
-            this.ItemDescription.Name = "ItemDescription";
-            this.ItemDescription.Width = 80;
-            // 
-            // PONumber
-            // 
-            this.PONumber.HeaderText = "PO Number";
-            this.PONumber.Name = "PONumber";
-            this.PONumber.Width = 60;
-            // 
-            // SONumber
-            // 
-            this.SONumber.HeaderText = "SO Number";
-            this.SONumber.Name = "SONumber";
-            this.SONumber.Width = 60;
-            // 
-            // BatchNumber
-            // 
-            this.BatchNumber.HeaderText = "Batch Number";
-            this.BatchNumber.Name = "BatchNumber";
-            this.BatchNumber.Width = 60;
-            // 
-            // TransType
-            // 
-            this.TransType.HeaderText = "Trans Type";
-            this.TransType.Name = "TransType";
-            this.TransType.Width = 60;
-            // 
-            // LocationCode
-            // 
-            this.LocationCode.HeaderText = "Location Code";
-            this.LocationCode.Name = "LocationCode";
-            this.LocationCode.Width = 60;
-            // 
-            // PickedQuantity
-            // 
-            this.PickedQuantity.HeaderText = "Picked Quantity";
-            this.PickedQuantity.Name = "PickedQuantity";
-            this.PickedQuantity.Width = 60;
-            // 
-            // PackedQty
-            // 
-            this.PackedQty.HeaderText = "Packed Qty";
-            this.PackedQty.Name = "PackedQty";
-            this.PackedQty.Width = 60;
-            // 
-            // BalanceQty
-            // 
-            this.BalanceQty.HeaderText = "BalanceQty";
-            this.BalanceQty.Name = "BalanceQty";
-            this.BalanceQty.Width = 70;
-            // 
-            // BoxNo
-            // 
-            this.BoxNo.HeaderText = "Box No";
-            this.BoxNo.Name = "BoxNo";
-            this.BoxNo.Width = 65;
-            // 
-            // Carton
-            // 
-            this.Carton.HeaderText = "Carton";
-            this.Carton.Name = "Carton";
-            this.Carton.Width = 90;
-            // 
-            // Grossweight
-            // 
-            this.Grossweight.HeaderText = "Gross weight";
-            this.Grossweight.Name = "Grossweight";
-            this.Grossweight.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grossweight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Grossweight.Width = 60;
-            // 
-            // Netweight
-            // 
-            this.Netweight.HeaderText = "Net weight";
-            this.Netweight.Name = "Netweight";
-            this.Netweight.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Netweight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Netweight.Width = 60;
+            this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
             // 
             // txtTotalQty
             // 
@@ -417,11 +334,143 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Carton code :-";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lblPicklist);
+            this.groupBox2.Controls.Add(this.CmbPicklistNo);
+            this.groupBox2.Location = new System.Drawing.Point(26, 124);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1008, 50);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // CmbPicklistNo
+            // 
+            this.CmbPicklistNo.FormattingEnabled = true;
+            this.CmbPicklistNo.Location = new System.Drawing.Point(100, 20);
+            this.CmbPicklistNo.Name = "CmbPicklistNo";
+            this.CmbPicklistNo.Size = new System.Drawing.Size(206, 21);
+            this.CmbPicklistNo.TabIndex = 0;
+            this.CmbPicklistNo.SelectedIndexChanged += new System.EventHandler(this.CmbPicklistNo_SelectedIndexChanged);
+            // 
+            // lblPicklist
+            // 
+            this.lblPicklist.AutoSize = true;
+            this.lblPicklist.Location = new System.Drawing.Point(47, 27);
+            this.lblPicklist.Name = "lblPicklist";
+            this.lblPicklist.Size = new System.Drawing.Size(40, 13);
+            this.lblPicklist.TabIndex = 1;
+            this.lblPicklist.Text = "Picklist";
+            // 
+            // ItemCode
+            // 
+            this.ItemCode.DataPropertyName = "ItemCode";
+            this.ItemCode.HeaderText = "Item Code";
+            this.ItemCode.Name = "ItemCode";
+            this.ItemCode.Width = 80;
+            // 
+            // ItemDescription
+            // 
+            this.ItemDescription.DataPropertyName = "ItemDescription";
+            this.ItemDescription.HeaderText = "Item Description";
+            this.ItemDescription.Name = "ItemDescription";
+            this.ItemDescription.Width = 80;
+            // 
+            // PONumber
+            // 
+            this.PONumber.DataPropertyName = "PONumber";
+            this.PONumber.HeaderText = "PO Number";
+            this.PONumber.Name = "PONumber";
+            this.PONumber.Width = 60;
+            // 
+            // SONumber
+            // 
+            this.SONumber.DataPropertyName = "SONumber";
+            this.SONumber.HeaderText = "SO Number";
+            this.SONumber.Name = "SONumber";
+            this.SONumber.Width = 60;
+            // 
+            // BatchNumber
+            // 
+            this.BatchNumber.DataPropertyName = "BatchNumber";
+            this.BatchNumber.HeaderText = "Batch Number";
+            this.BatchNumber.Name = "BatchNumber";
+            this.BatchNumber.Width = 60;
+            // 
+            // TransType
+            // 
+            this.TransType.DataPropertyName = "TransactionTypeName";
+            this.TransType.HeaderText = "Trans Type";
+            this.TransType.Name = "TransType";
+            this.TransType.Width = 60;
+            // 
+            // LocationCode
+            // 
+            this.LocationCode.DataPropertyName = "LocationCode";
+            this.LocationCode.HeaderText = "Location Code";
+            this.LocationCode.Name = "LocationCode";
+            this.LocationCode.Width = 60;
+            // 
+            // PickedQuantity
+            // 
+            this.PickedQuantity.DataPropertyName = "PickedQty";
+            this.PickedQuantity.HeaderText = "Picked Quantity";
+            this.PickedQuantity.Name = "PickedQuantity";
+            this.PickedQuantity.Width = 60;
+            // 
+            // PackedQty
+            // 
+            this.PackedQty.DataPropertyName = "packQty";
+            this.PackedQty.HeaderText = "Packed Qty";
+            this.PackedQty.Name = "PackedQty";
+            this.PackedQty.Width = 60;
+            // 
+            // BalanceQty
+            // 
+            this.BalanceQty.HeaderText = "BalanceQty";
+            this.BalanceQty.Name = "BalanceQty";
+            this.BalanceQty.Width = 70;
+            // 
+            // BoxNo
+            // 
+            this.BoxNo.DataPropertyName = "BoxNumber";
+            this.BoxNo.HeaderText = "Box No";
+            this.BoxNo.Name = "BoxNo";
+            this.BoxNo.Width = 65;
+            // 
+            // Carton
+            // 
+            this.Carton.DataPropertyName = "ItemDescription";
+            this.Carton.HeaderText = "Carton";
+            this.Carton.Name = "Carton";
+            this.Carton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Carton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Carton.Width = 90;
+            // 
+            // Grossweight
+            // 
+            this.Grossweight.HeaderText = "Gross weight";
+            this.Grossweight.Name = "Grossweight";
+            this.Grossweight.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grossweight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Grossweight.Width = 60;
+            // 
+            // Netweight
+            // 
+            this.Netweight.DataPropertyName = "TotalWeight";
+            this.Netweight.HeaderText = "Net weight";
+            this.Netweight.Name = "Netweight";
+            this.Netweight.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Netweight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Netweight.Width = 60;
+            // 
             // PackingSlip_Mannual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 644);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridViewPicklist);
             this.Controls.Add(this.grpCartonDetail);
             this.Controls.Add(this.groupBox1);
@@ -434,6 +483,8 @@
             this.grpCartonDetail.ResumeLayout(false);
             this.grpCartonDetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -466,6 +517,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalItems;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmount;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lblPicklist;
+        private System.Windows.Forms.ComboBox CmbPicklistNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn PONumber;
@@ -477,7 +531,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PackedQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn BalanceQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn BoxNo;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Carton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Carton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grossweight;
         private System.Windows.Forms.DataGridViewTextBoxColumn Netweight;
     }

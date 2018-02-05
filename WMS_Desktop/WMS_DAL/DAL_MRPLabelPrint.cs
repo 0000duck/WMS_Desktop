@@ -23,14 +23,14 @@ namespace WMS_DAL
 
         public DataTable GetClientList()
         {
-            string query = string.Format("Sp_GetClientList");
+            string query = string.Format("SpGetClientList");
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return conn.executeSelectQuery(query, sqlParameters);
         }
 
         public DataTable GetClientMRNNO( int Client_Id)
         {
-            string query = string.Format("Sp_GetMRNNO");
+            string query = string.Format("SpGetMRNNO");
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@ClientId", Client_Id);
             return conn.executeSelectQuery(query, sqlParameters);
@@ -38,7 +38,7 @@ namespace WMS_DAL
 
         public DataTable GetPONO(string MRNNo)
         {
-            string query = string.Format("Sp_GetPONo");
+            string query = string.Format("SpGetPONo");
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MRNNo", MRNNo);
             return conn.executeSelectQuery(query, sqlParameters);
@@ -71,7 +71,7 @@ namespace WMS_DAL
 
         public DataTable GetPreferenceById(int clientId)
         {
-            string query = string.Format("Sp_GetPreferenceById");
+            string query = string.Format("SpGetPreferenceById");
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@ClientId", clientId);
             return conn.executeSelectQuery(query, sqlParameters);
@@ -81,7 +81,7 @@ namespace WMS_DAL
         {
             int result = 0;
             DataTable dt = new DataTable();
-            string query = string.Format("sp_GetPickingStrategyOfItem");
+            string query = string.Format("spGetPickingStrategyOfItem");
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@ItemId", ItemId);
            dt = conn.executeSelectQuery(query, sqlParameters);
@@ -115,7 +115,7 @@ namespace WMS_DAL
 
         public DataTable GetItemDetailsForLablePrinting(MRPPrintModel m)
         {
-            string query = string.Format("Sp_GetItemDetailsForLablePrinting");
+            string query = string.Format("SpGetItemDetailsForLablePrinting");
             SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[0] = new SqlParameter("@ClientId", m.Client_Id);
             sqlParameters[1] = new SqlParameter("@MRNNo", m.MRNNo);

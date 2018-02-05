@@ -132,7 +132,6 @@
             this.txtMrp.Name = "txtMrp";
             this.txtMrp.Size = new System.Drawing.Size(144, 20);
             this.txtMrp.TabIndex = 7;
-            this.txtMrp.Text = "0";
             this.txtMrp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtStockQty
@@ -141,7 +140,7 @@
             this.txtStockQty.Name = "txtStockQty";
             this.txtStockQty.Size = new System.Drawing.Size(144, 20);
             this.txtStockQty.TabIndex = 6;
-            this.txtStockQty.Text = "0";
+            this.txtStockQty.Text = "1";
             this.txtStockQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // cmbItem
@@ -204,12 +203,13 @@
             this.groupBox2.Controls.Add(this.rdbtnForIndustrialUseOnly);
             this.groupBox2.Controls.Add(this.rdbtnDoNotMRP);
             this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Location = new System.Drawing.Point(26, 279);
+            this.groupBox2.Location = new System.Drawing.Point(26, 597);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(906, 55);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Select MRP / Industrial Use / Retail Sale";
+            this.groupBox2.Visible = false;
             // 
             // rdbtnNotforRetailSale
             // 
@@ -261,12 +261,13 @@
             this.groupBox3.Controls.Add(this.rdbtnNotforRetailSale1);
             this.groupBox3.Controls.Add(this.rdbtnForIndustrialUseOnly1);
             this.groupBox3.Controls.Add(this.rdbtnDoNotMRP1);
-            this.groupBox3.Location = new System.Drawing.Point(26, 358);
+            this.groupBox3.Location = new System.Drawing.Point(26, 662);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(906, 55);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "IF MRP IS ZERO";
+            this.groupBox3.Visible = false;
             // 
             // rdbtnNotforRetailSale1
             // 
@@ -306,7 +307,7 @@
             // 
             this.groupBox4.Controls.Add(this.rdbtnQRCode);
             this.groupBox4.Controls.Add(this.rdbtnBarcode);
-            this.groupBox4.Location = new System.Drawing.Point(26, 428);
+            this.groupBox4.Location = new System.Drawing.Point(26, 289);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(906, 254);
             this.groupBox4.TabIndex = 3;
@@ -338,7 +339,7 @@
             // 
             // BtnPrintLable
             // 
-            this.BtnPrintLable.Location = new System.Drawing.Point(403, 694);
+            this.BtnPrintLable.Location = new System.Drawing.Point(389, 549);
             this.BtnPrintLable.Name = "BtnPrintLable";
             this.BtnPrintLable.Size = new System.Drawing.Size(127, 23);
             this.BtnPrintLable.TabIndex = 4;
@@ -354,8 +355,8 @@
             this.Controls.Add(this.BtnPrintLable);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Name = "MRPLabelPrint";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MRPLabelPrint";

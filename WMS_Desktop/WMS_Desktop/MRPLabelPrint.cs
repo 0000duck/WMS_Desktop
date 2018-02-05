@@ -71,6 +71,31 @@ namespace WMS_Desktop
             if (dt != null && dt.Rows.Count > 0)
             {
                 txtItemDesc.Text = dt.Rows[0]["ItemDescription"].ToString();
+
+
+                if (Convert.ToDouble(dt.Rows[0]["MRP"]) == 0.0)
+                {
+                    if (dt.Rows[0]["MRPValue"] != null || dt.Rows[0]["MRPValue"] != " ")
+                    {
+                        if (dt.Rows[0]["MRPValue"] == "I")
+                        {
+                            txtMrp.Text = "Industrial";
+                        }
+                        else if (dt.Rows[0]["MRPValue"] == "N")
+                        {
+                            txtMrp.Text = "Not For sale";
+                        }
+                        else 
+                        {
+                            txtMrp.Text = "0.0";
+                        }
+                    }
+                }
+                else
+                {
+                  txtMrp.Text=(Convert.ToDouble(dt.Rows[0]["MRP"]).ToString());
+                }
+
             }
         }
 
@@ -107,7 +132,6 @@ namespace WMS_Desktop
             e.DataSources.Add(rds);
         }
 
-
         private void BtnPrintLable_Click(object sender, EventArgs e)
         {
             if (rdbtnBarcode.Checked == true)
@@ -132,7 +156,10 @@ namespace WMS_Desktop
             string Itemcode = _dal_MrpPrint.GetItemsCode(Convert.ToInt32(cmbItem.SelectedValue));
             int stockKeepingqty = Convert.ToInt32(txtStockQty.Text);
             string StockkeepingUnit = _MRP_LabelPrint_Dal.GetUOMUnit(Convert.ToInt32(cmbUOM.SelectedValue));
+            string Mrp = txtMrp.Text.ToString();
+            
             int barcodeCombinationid = 1;
+
             //int SelectMRPOrIndustrailuseValue;
             //int IFMRPIsZero;
             WMSData ws = new WMSData();
@@ -185,35 +212,16 @@ namespace WMS_Desktop
                     string desc = string.IsNullOrEmpty(Itemdesc) ? string.Empty : (Itemdesc.Length > 35 ? Itemdesc.Substring(0, 35) : Itemdesc);
                     ws.tblLabelPrinting.Rows.Add("Description","Item Name: " + desc, fid);
                     ws.tblLabelPrinting.Rows.Add("Quantity: " + stockKeepingqty + " " + StockkeepingUnit, fid);
-                    
-                    //if (SelectedMRPString == 1)
-                    //    if (MRP == 0)
-                    //    {
-                    //        if (IfMRPIsZeroValue == 2)
-                    //        {
-                    //            SelectedMRPString = 3;
-                    //        }
-                    //        else if (IfMRPIsZeroValue == 3)
-                    //        {
-                    //            SelectedMRPString = 4;
-                    //        }
-                    //        else if (IfMRPIsZeroValue == 1)
-                    //        {
-                    //            SelectedMRPString = 2;
-                    //        }
-                    //    }
-                    //    else
-                    //    {
-                    //        wmsDs.tblLabelPrinting.Rows.Add(@ReportRes.MRP, "MRP (Rs.): " + MRP * StockKeepingqty + " ( Inclusive of all taxes )", fid);
-                    //        // wmsDs.tblLabelPrinting.Rows.Add(@ReportRes.MRP, "MRP (" + "" + " ): " + MRP * StockKeepingqty + " ( Inclusive of all taxes )", fid);
-                    //    }
 
-                    //if (SelectedMRPString == 2)
-                    //    wmsDs.tblLabelPrinting.Rows.Add(@ReportRes.Quantity, string.Empty, fid);
-                    //if (SelectedMRPString == 3)
-                    //    wmsDs.tblLabelPrinting.Rows.Add(@ReportRes.Quantity, ReportRes.ForIndustrialUseOnly, fid);
-                    //if (SelectedMRPString == 4)
-                    //    wmsDs.tblLabelPrinting.Rows.Add(@ReportRes.Quantity, ReportRes.NotForRetailSale, fid);
+                    if (Convert.ToDouble(Mrp) == 0.0 || Convert.ToDouble(Mrp)== 0)
+                    {
+                        string message = txtMrp.Text;
+                        ws.tblLabelPrinting.Rows.Add("Quantity", message, fid);
+                    }
+                    else 
+                    {
+                        ws.tblLabelPrinting.Rows.Add("MRP", "MRP (Rs.): " + Convert.ToDouble(Mrp) * stockKeepingqty + " ( Inclusive of all taxes )", fid);
+                    }
 
                     string currentMonthYear = DateTime.Now.ToString("MMM-yyyy");
                     ws.tblLabelPrinting.Rows.Add("Quantity", "Month & Year of Packing: " + currentMonthYear, fid);
@@ -292,20 +300,20 @@ namespace WMS_Desktop
                 string targetPath = @"C:/Reports_PDF";
 
                 // Use Path class to manipulate file and directory paths.
-                string sourceFile = System.IO.Path.Combine(sourcePath, file_name);
-                string destFile = System.IO.Path.Combine(targetPath, file_name);
+                //string sourceFile = System.IO.Path.Combine(sourcePath, file_name);
+                //string destFile = System.IO.Path.Combine(targetPath, file_name);
 
-                // To copy a folder's contents to a new location:
-                // Create a new target folder, if necessary.
-                if (!System.IO.Directory.Exists(targetPath))
-                {
-                    System.IO.Directory.CreateDirectory(targetPath);
-                }
+                //// To copy a folder's contents to a new location:
+                //// Create a new target folder, if necessary.
+                //if (!System.IO.Directory.Exists(targetPath))
+                //{
+                //    System.IO.Directory.CreateDirectory(targetPath);
+                //}
 
-                // To copy a file to another location and 
-                // overwrite the destination file if it already exists.
-                System.IO.File.Copy(sourceFile, destFile, true);
-                string NewFilePath = targetPath + "/" + file_name;
+                //// To copy a file to another location and 
+                //// overwrite the destination file if it already exists.
+                //System.IO.File.Copy(sourceFile, destFile, true);
+                //string NewFilePath = targetPath + "/" + file_name;
                 string AdobeReaderExePath = @"C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe";
                 string DirName = AppDomain.CurrentDomain.BaseDirectory;
                 string dir1 = DirName + @"\Reports_PDF\";
@@ -328,7 +336,7 @@ namespace WMS_Desktop
                         proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                         if (proc.HasExited == false)
                         {
-                            proc.WaitForExit(Convert.ToInt32(1000));
+                            proc.WaitForExit(Convert.ToInt32(10000));
                         }
 
                         proc.EnableRaisingEvents = true;
@@ -338,9 +346,9 @@ namespace WMS_Desktop
                         File.Delete(dir);
                     }
                 }
-                string message = "Sticker are genrated";
-                MessageBox.Show(message);
-                clear();
+                string message1 = "Sticker are genrated";
+                MessageBox.Show(message1);
+              //  clear();
                 viewer.LocalReport.Refresh();
 
                 
@@ -363,6 +371,7 @@ namespace WMS_Desktop
             int stockKeepingqty = Convert.ToInt32(txtStockQty.Text);
             string StockkeepingUnit = _MRP_LabelPrint_Dal.GetUOMUnit(Convert.ToInt32(cmbUOM.SelectedValue));
             int barcodeCombinationid = 1;
+            string Mrp = txtMrp.Text.ToString();
             //int SelectMRPOrIndustrailuseValue;
             //int IFMRPIsZero;
             WMSData ws = new WMSData();
@@ -429,6 +438,18 @@ namespace WMS_Desktop
                     string desc = string.IsNullOrEmpty(Itemdesc) ? string.Empty : (Itemdesc.Length > 35 ? Itemdesc.Substring(0, 35) : Itemdesc);
                     ws.tblLabelPrinting.Rows.Add("Description", "Item Name: " + desc, fid);
                     ws.tblLabelPrinting.Rows.Add("Quantity: " + stockKeepingqty + " " + StockkeepingUnit, fid);
+                   
+                    if (Convert.ToDouble(Mrp) == 0.0 || Convert.ToDouble(Mrp) == 0)
+                    {
+                        string msg = txtMrp.Text;
+                        ws.tblLabelPrinting.Rows.Add("Quantity", msg, fid);
+                    }
+                    else
+                    {
+                        ws.tblLabelPrinting.Rows.Add("MRP", "MRP (Rs.): " + Convert.ToDouble(Mrp) * stockKeepingqty + " ( Inclusive of all taxes )", fid);
+                    }
+
+
 
                     //if (SelectedMRPString == 1)
                     //    if (MRP == 0)
@@ -572,7 +593,7 @@ namespace WMS_Desktop
                         proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                         if (proc.HasExited == false)
                         {
-                            proc.WaitForExit(Convert.ToInt32(1000));
+                            proc.WaitForExit(Convert.ToInt32(10000));
                         }
 
                         proc.EnableRaisingEvents = true;
@@ -584,7 +605,7 @@ namespace WMS_Desktop
                 }
                 string message = "Sticker are genrated";
                 MessageBox.Show(message);
-                clear();
+               // clear();
                 viewer.LocalReport.Refresh();
 
 
@@ -596,7 +617,6 @@ namespace WMS_Desktop
 
             }
         }
-
 
         private static bool KillAdobe(string name)
         {

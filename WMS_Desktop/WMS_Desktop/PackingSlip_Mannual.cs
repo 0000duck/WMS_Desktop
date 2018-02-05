@@ -100,35 +100,84 @@ namespace WMS_Desktop
             dtShiftToCode = _PackinglipManual_dal.GetShitToIds(Convert.ToInt32(cmbClient.SelectedValue));
             if (dtShiftToCode.Rows.Count > 0)
             {
-                cmbShipTo.DisplayMember = "Name";
-                cmbShipTo.ValueMember = "Id";
-                cmbShipTo.DataSource = dtShiftToCode;
+                    cmbShipTo.DisplayMember = "Name";
+                    cmbShipTo.ValueMember = "Id";
+                    cmbShipTo.DataSource = dtShiftToCode;
             }
         }
 
         private void cmbShipTo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dataGridViewPicklist.Visible = true;
-            grpCartonDetail.Visible = true;
+            //dataGridViewPicklist.Visible = true;
+            //grpCartonDetail.Visible = true;
             DataTable dtpicklist = new DataTable();
-            //dtpicklist = _PackinglipManual_dal.GetShitToIds(Convert.ToInt32(cmbClient.SelectedValue));
-            //if (dtpicklist.Rows.Count > 0)
-            //{
-            //    dataGridViewPicklist.DataSource = dtpicklist;
-            //}
-            //else 
-            //{
-            //    dataGridViewPicklist.DataSource = null;
-            //}
+            dtpicklist = _PackinglipManual_dal.GetPicklistNo(Convert.ToInt32(cmbShipTo.SelectedValue));
+            if (dtpicklist.Rows.Count > 0)
+            {
+                    CmbPicklistNo.DisplayMember = "ManualCaseNumber";
+                    CmbPicklistNo.ValueMember = "ManualCaseNumber";
+                    CmbPicklistNo.DataSource = dtpicklist;
+            }
+            else
+            {
+                CmbPicklistNo.DataSource = null;
+                dataGridViewPicklist.DataSource = null;
+            }
+
         }
+
+
+
+
 
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Columns[e.ColumnIndex].Name == "Qty")
+            int cell8 = Convert.ToInt32(dataGridView1.CurrentRow.Cells[8].Value);
+
+            int cell9 = Convert.ToInt32(dataGridView1.CurrentRow.Cells[9].Value);
+
+            dataGridView1.CurrentRow.Cells[10].Value = cell8 - cell9;
+
+            }
+
+        private void CmbPicklistNo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dtPicklistDetail = new DataTable();
+            string userId = LoginInfo.UserID;
+            int ClientId = _PackinglipManual_dal.GetClientId(userId);
+            dtPicklistDetail = _PackinglipManual_dal.GetPicklistDetail(CmbPicklistNo.SelectedValue.ToString(), ClientId);
+            if (dtPicklistDetail.Rows.Count > 0)
             {
-             dataGridView1.CurrentRow.Cells[2].Value = (System.Convert.ToDecimal(dataGridView1.CurrentRow.Cells[1].Value) * System.Convert.ToDecimal("0.01"));
+                dataGridView1.DataSource = dtPicklistDetail;
+                //DataGridViewComboBoxCell ComboColumn = (DataGridViewComboBoxCell)(dataGridView1.Rows[12].Cells[0]);
+                //ComboColumn.DataSource = dtPicklistDetail.Rows[0]["ItemDescription"];
+                //ComboColumn.DisplayMember = "ItemDescription";
+                //dataGridView1.Columns.Add(ComboColumn);
             }
+            else 
+            {
+                dataGridView1.DataSource = null;
             }
+        }
+
+        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            //DataTable dtPicklistDetail = new DataTable();
+            //string userId = LoginInfo.UserID;
+            //int ClientId = _PackinglipManual_dal.GetClientId(userId);
+            //dtPicklistDetail = _PackinglipManual_dal.GetPicklistDetail(CmbPicklistNo.SelectedValue.ToString(), ClientId);
+            ////DataGridViewComboBoxCell box = dataGridView1.Rows[e.RowIndex].Cells[12] as DataGridViewComboBoxCell;
+            ////box.DataSource = dtPicklistDetail;
+            //try
+            //{
+            //    DataGridViewComboBoxCell ComboColumn = (DataGridViewComboBoxCell)(dataGridView1.Rows[12].Cells[0]);
+
+            //    ComboColumn.DataSource = dtPicklistDetail.Rows[0]["ItemDescription"];
+            //    ComboColumn.DisplayMember = "ItemDescription";
+            //}
+            //catch { }
+
+        }
 
         }
     

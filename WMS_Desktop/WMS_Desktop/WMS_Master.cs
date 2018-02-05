@@ -118,5 +118,11 @@ namespace WMS_Desktop
             PackingSlip_Mannual pack = new PackingSlip_Mannual();
             pack.Show();
         }
+
+        private void packingMannualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Packing_Mannual p = new Packing_Mannual();
+            p.Show();
+        }
     }
 }
