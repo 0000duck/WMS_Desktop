@@ -52,3 +52,9 @@ F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.pdb
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.csprojResolveAssemblyReference.cache
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.dll
 F:\rahul\WMS_Desktop\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.pdb
+E:\Spear_Windows\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll.config
+E:\Spear_Windows\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.dll
+E:\Spear_Windows\WMS_Desktop\WMS_Core\bin\Debug\WMS_Core.pdb
+E:\Spear_Windows\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.csprojResolveAssemblyReference.cache
+E:\Spear_Windows\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.dll
+E:\Spear_Windows\WMS_Desktop\WMS_Core\obj\Debug\WMS_Core.pdb

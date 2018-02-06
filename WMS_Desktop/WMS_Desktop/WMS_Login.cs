@@ -47,40 +47,46 @@ namespace WMS_Desktop
             //obj.Show();
 
 
-            if (Convert.ToInt32(cmbWarehouse.SelectedValue) <= 0)
-            {
-                MessageBox.Show("Please select warehouse.", "Warning");
-            }
-            else if (string.IsNullOrEmpty(txtPassword.Text.Trim()) || string.IsNullOrEmpty(txtUsername.Text.Trim()))
-            {
-                MessageBox.Show("Please enter username and password.", "Warning");
-            }
-            else
-            {
-                LoginVO loginVO = new LoginVO();
-                loginVO.WarehouseId = Convert.ToInt32(cmbWarehouse.SelectedValue);
-                loginVO.Username = txtUsername.Text.Trim();
-                loginVO.Password = txtPassword.Text.Trim();
+            //if (Convert.ToInt32(cmbWarehouse.SelectedValue) <= 0)
+            //{
+            //    MessageBox.Show("Please select warehouse.", "Warning");
+            //}
+            //else if (string.IsNullOrEmpty(txtPassword.Text.Trim()) || string.IsNullOrEmpty(txtUsername.Text.Trim()))
+            //{
+            //    MessageBox.Show("Please enter username and password.", "Warning");
+            //}
+            //else
+            //{
+            //    LoginVO loginVO = new LoginVO();
+            //    loginVO.WarehouseId = Convert.ToInt32(cmbWarehouse.SelectedValue);
+            //    loginVO.Username = txtUsername.Text.Trim();
+            //    loginVO.Password = txtPassword.Text.Trim();
 
-                DataTable dt = _dal_Login.GetLoginDetails(loginVO);
-                if (dt != null && dt.Rows.Count > 0)
-                {
+            //    DataTable dt = _dal_Login.GetLoginDetails(loginVO);
+            //    if (dt != null && dt.Rows.Count > 0)
+            //    {
 
-                    this.Hide();
-                    UserId = dt.Rows[0]["Id"].ToString();
-                    LoginInfo.UserID = dt.Rows[0]["Id"].ToString();
-                    WMS_Master master = new WMS_Master();
-                    master.Show();
+            //        this.Hide();
+            //        UserId = dt.Rows[0]["Id"].ToString();
+            //        LoginInfo.UserID = dt.Rows[0]["Id"].ToString();
+            //        WMS_Master master = new WMS_Master();
+            //        master.Show();
 
-                }
-                else
-                {
-                    txtUsername.Text = string.Empty;
-                    txtPassword.Text = string.Empty;
-                    MessageBox.Show("Invalid username and password.", "Warning");
-                }
+            //    }
+            //    else
+            //    {
+            //        txtUsername.Text = string.Empty;
+            //        txtPassword.Text = string.Empty;
+            //        MessageBox.Show("Invalid username and password.", "Warning");
+            //    }
 
-            }
+            //}
+
+            this.Hide();
+            //UserId = dt.Rows[0]["Id"].ToString();
+           // LoginInfo.UserID = dt.Rows[0]["Id"].ToString();
+            WMS_Master master = new WMS_Master();
+            master.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
